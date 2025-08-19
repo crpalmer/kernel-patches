@@ -1,7 +1,7 @@
 From 2fa4c505115d974b27d53b63284c8b1527316c97 Mon Sep 17 00:00:00 2001
 From: Konrad Dybcio <konrad.dybcio@linaro.org>
 Date: Tue, 25 Apr 2023 13:55:39 +0000
-Subject: [PATCH 05/56] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp: Add Venus
+Subject: [PATCH 05/39] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp: Add Venus
 
 BugLink: https://bugs.launchpad.net/bugs/2078929
 

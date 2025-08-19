@@ -1,42 +1,67 @@
-From 9de9545a2b5f697d3bb085a26ce4d3be043d4d52 Mon Sep 17 00:00:00 2001
-From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
-Date: Sun, 9 Mar 2025 16:47:02 +0100
-Subject: [PATCH 10/39] UBUNTU: SAUCE: arm64: dts: qcom:
- x1e80100-dell-xps-9345: Add WiFi/BT pwrseq
+From 69a1844d940453a069663ae914916f8e1f8687df Mon Sep 17 00:00:00 2001
+From: Stephan Gerhold <stephan.gerhold@linaro.org>
+Date: Mon, 7 Oct 2024 20:37:16 +0200
+Subject: [PATCH 13/39] wip: arm64: dts: qcom: x1e80100-crd: Add WiFi/BT pwrseq
 
-BugLink: https://bugs.launchpad.net/bugs/2100858
+Add the WiFi/BT nodes for CRD and describe the regulators for the WCN7850
+combo chip using the new power sequencing bindings.
 
-Add the WiFi/BT nodes for XPS and describe the regulators for the WCN7850
-combo chip using the new power sequencing bindings. All voltages are
-derived from chained fixed regulators controlled using a single GPIO.
+Unlike QCP, CRD has the WCN7850 chip on a removable M.2 card. In this case,
+there is only a standard 3.3V and 1.8V supply that we need to turn on (plus
+the two enable GPIOs). The other voltages (0.95V and 1.9V) are derived on
+the M.2 card, by regulators that are not part of the CRD mainboard.
 
-Derived from:
-arm64: dts: qcom: x1e80100-qcp: Add WiFi/BT pwrseq
+Right now the bindings require describing all of these regulators. We need
+new bindings to describe these M.2 cards with only the two actual supplies.
+For now just copy the necessary additions from QCP. Functionally this works
+correctly for CRD, because from a hardware perspective we need to do
+exactly the same for both devices (toggle the GPIO to get the supplies up).
 
-Signed-off-by: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
-Signed-off-by: Tobias Heider <tobias.heider@canonical.com>
-Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+Signed-off-by: Stephan Gerhold <stephan.gerhold@linaro.org>
+[ johan: rebase on x1-crd.dtsi split ]
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
 ---
- .../dts/qcom/x1e80100-dell-xps13-9345.dts     | 144 ++++++++++++++++++
- 1 file changed, 144 insertions(+)
+ arch/arm64/boot/dts/qcom/x1-crd.dtsi | 150 +++++++++++++++++++++++++++
+ 1 file changed, 150 insertions(+)
 
-diff --git a/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts b/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
-index 967f6dba0878..fd6f2e7097a8 100644
---- a/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
-+++ b/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
-@@ -22,6 +22,7 @@ / {
+diff --git a/arch/arm64/boot/dts/qcom/x1-crd.dtsi b/arch/arm64/boot/dts/qcom/x1-crd.dtsi
+index c9f0d5052670..db87b9b5be63 100644
+--- a/arch/arm64/boot/dts/qcom/x1-crd.dtsi
++++ b/arch/arm64/boot/dts/qcom/x1-crd.dtsi
+@@ -17,6 +17,7 @@ / {
  
  	aliases {
  		serial0 = &uart21;
 +		serial1 = &uart14;
  	};
  
- 	gpio-keys {
-@@ -288,6 +289,101 @@ vreg_vph_pwr: regulator-vph-pwr {
- 		regulator-always-on;
+ 	wcd938x: audio-codec {
+@@ -491,6 +492,48 @@ vph_pwr: regulator-vph-pwr {
  		regulator-boot-on;
  	};
+ 
++	vreg_wcn_3p3: regulator-wcn-3p3 {
++		compatible = "regulator-fixed";
 +
++		regulator-name = "VREG_WCN_3P3";
++		regulator-min-microvolt = <3300000>;
++		regulator-max-microvolt = <3300000>;
++
++		gpio = <&tlmm 214 GPIO_ACTIVE_HIGH>;
++		enable-active-high;
++
++		pinctrl-0 = <&wcn_sw_en>;
++		pinctrl-names = "default";
++
++		regulator-boot-on;
++	};
++
++	/*
++	 * TODO: These two regulators are actually part of the removable M.2
++	 * card and not the CRD mainboard. Need to describe this differently.
++	 * Functionally it works correctly, because all we need to do is to
++	 * turn on the actual 3.3V supply above.
++	 */
 +	vreg_wcn_0p95: regulator-wcn-0p95 {
 +		compatible = "regulator-fixed";
 +
@@ -57,21 +82,13 @@ index 967f6dba0878..fd6f2e7097a8 100644
 +		vin-supply = <&vreg_wcn_3p3>;
 +	};
 +
-+	vreg_wcn_3p3: regulator-wcn-3p3 {
-+		compatible = "regulator-fixed";
-+
-+		regulator-name = "VREG_WCN_3P3";
-+		regulator-min-microvolt = <3300000>;
-+		regulator-max-microvolt = <3300000>;
-+
-+		gpio = <&tlmm 214 GPIO_ACTIVE_HIGH>;
-+		enable-active-high;
-+
-+		pinctrl-0 = <&wcn_sw_en>;
-+		pinctrl-names = "default";
-+
-+		regulator-boot-on;
-+	};
+ 	vreg_wwan: regulator-wwan {
+ 		compatible = "regulator-fixed";
+ 
+@@ -506,6 +549,65 @@ vreg_wwan: regulator-wwan {
+ 
+ 		regulator-boot-on;
+ 	};
 +
 +	wcn7850-pmu {
 +		compatible = "qcom,wcn7850-pmu";
@@ -134,7 +151,7 @@ index 967f6dba0878..fd6f2e7097a8 100644
  };
  
  &apps_rsc {
-@@ -848,6 +944,23 @@ &pcie4_phy {
+@@ -1206,6 +1308,23 @@ &pcie4_phy {
  	status = "okay";
  };
  
@@ -155,13 +172,19 @@ index 967f6dba0878..fd6f2e7097a8 100644
 +	};
 +};
 +
- &pcie6a {
- 	perst-gpios = <&tlmm 152 GPIO_ACTIVE_LOW>;
- 	wake-gpios = <&tlmm 154 GPIO_ACTIVE_LOW>;
-@@ -1102,6 +1215,37 @@ reset-n-pins {
- 			drive-strength = <2>;
- 		};
+ &pcie5 {
+ 	perst-gpios = <&tlmm 149 GPIO_ACTIVE_LOW>;
+ 	wake-gpios = <&tlmm 151 GPIO_ACTIVE_LOW>;
+@@ -1639,6 +1758,20 @@ wcd_default: wcd-reset-n-active-state {
+ 		output-low;
  	};
+ 
++	wcn_sw_en: wcn-sw-en-state {
++		pins = "gpio214";
++		function = "gpio";
++		drive-strength = <2>;
++		bias-disable;
++	};
 +
 +	wcn_wlan_bt_en: wcn-wlan-bt-en-state {
 +		pins = "gpio116", "gpio117";
@@ -170,14 +193,13 @@ index 967f6dba0878..fd6f2e7097a8 100644
 +		bias-disable;
 +	};
 +
-+	wcn_sw_en: wcn-sw-en-state {
-+		pins = "gpio214";
-+		function = "gpio";
-+		drive-strength = <2>;
-+		bias-disable;
-+	};
-+};
-+
+ 	wwan_sw_en: wwan-sw-en-state {
+ 		pins = "gpio221";
+ 		function = "gpio";
+@@ -1647,6 +1780,23 @@ wwan_sw_en: wwan-sw-en-state {
+ 	};
+ };
+ 
 +&uart14 {
 +	status = "okay";
 +
@@ -193,9 +215,11 @@ index 967f6dba0878..fd6f2e7097a8 100644
 +		vddrfa1p2-supply = <&vreg_pmu_rfa_1p2>;
 +		vddrfa1p8-supply = <&vreg_pmu_rfa_1p8>;
 +	};
- };
- 
++};
++
  &uart21 {
+ 	compatible = "qcom,geni-debug-uart";
+ 	status = "okay";
 -- 
 2.48.1
 
