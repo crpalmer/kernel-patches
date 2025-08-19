@@ -1,7 +1,7 @@
-From 14831bf74984492f80405c22caa182e1501e74b3 Mon Sep 17 00:00:00 2001
+From d84b58cad2a73cf9c492feb155a9823cd8628f45 Mon Sep 17 00:00:00 2001
 From: Rob Clark <robdclark@chromium.org>
 Date: Thu, 15 May 2025 14:06:20 -0700
-Subject: [PATCH 29/39] drm/panel-edp: Add BOE NV133WUM-N61 panel entry
+Subject: [PATCH 29/40] drm/panel-edp: Add BOE NV133WUM-N61 panel entry
 
 Add an eDP panel for BOE NV133WUM-N61, which appears to be a 3rd panel
 option on the lenevo x13s laptop.

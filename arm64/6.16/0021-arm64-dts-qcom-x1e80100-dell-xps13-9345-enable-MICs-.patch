@@ -1,7 +1,7 @@
-From 831236e16133ff2a21c55fbc689912789295b73d Mon Sep 17 00:00:00 2001
+From 367a8075eaa2518d309e1b4424866f6566f170c4 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Thu, 10 Apr 2025 21:29:14 +0200
-Subject: [PATCH 21/39] arm64: dts: qcom: x1e80100-dell-xps13-9345: enable MICs
+Subject: [PATCH 21/40] arm64: dts: qcom: x1e80100-dell-xps13-9345: enable MICs
  LDO
 
 Particular device comes without headset combo jack, hence does not

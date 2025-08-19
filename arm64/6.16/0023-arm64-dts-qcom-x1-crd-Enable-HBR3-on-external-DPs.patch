@@ -1,7 +1,7 @@
-From 5956de6e111ce5e67860888553839c5f3c63b3ac Mon Sep 17 00:00:00 2001
+From 134d268b65a8fd4ce315e4c78d1db642f8fee880 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 30 Jun 2025 22:54:10 +0200
-Subject: [PATCH 23/39] arm64: dts: qcom: x1-crd: Enable HBR3 on external DPs
+Subject: [PATCH 23/40] arm64: dts: qcom: x1-crd: Enable HBR3 on external DPs
 
 When no link frequencies are set, msm/dp driver defaults to HBR2 speed.
 Explicitly list supported frequencies including HBR3/8.1Gbps for all

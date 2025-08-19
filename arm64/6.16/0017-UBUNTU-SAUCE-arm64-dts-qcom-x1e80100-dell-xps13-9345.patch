@@ -1,7 +1,7 @@
-From f4ca79ed683db4231f699bc5b6c26694a54e4b2e Mon Sep 17 00:00:00 2001
+From 0017659f7765d564eb467cb708e7849f15411d7a Mon Sep 17 00:00:00 2001
 From: Sibi Sankar <quic_sibis@quicinc.com>
 Date: Mon, 11 Nov 2024 20:09:13 +0530
-Subject: [PATCH 17/39] UBUNTU: SAUCE: arm64: dts: qcom:
+Subject: [PATCH 17/40] UBUNTU: SAUCE: arm64: dts: qcom:
  x1e80100-dell-xps13-9345: Add Left/Right Speakers and Tweeter
 
 Enable left and right speakers/tweeters on the X1E80100 Dell XPS13 9345.

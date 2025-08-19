@@ -1,7 +1,7 @@
-From 2b9e1116c762c1c6af5dddff5fa607e451e431b1 Mon Sep 17 00:00:00 2001
+From e0589dbd09c7894b858bc890cb958f9be51d878a Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 16:56:16 +0200
-Subject: [PATCH 36/39] phy: phy-snps-eusb2: fix clock imbalance on phy_exit()
+Subject: [PATCH 36/40] phy: phy-snps-eusb2: fix clock imbalance on phy_exit()
 
 Make sure to disable all clocks enabled at phy_init() also on
 phy_exit().
@@ -14,10 +14,10 @@ Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/phy/phy-snps-eusb2.c b/drivers/phy/phy-snps-eusb2.c
-index 751b6d8ba2be..56354a33172d 100644
+index e78d222eec5f..e166b8f914fe 100644
 --- a/drivers/phy/phy-snps-eusb2.c
 +++ b/drivers/phy/phy-snps-eusb2.c
-@@ -504,7 +504,7 @@ static int snps_eusb2_hsphy_exit(struct phy *p)
+@@ -507,7 +507,7 @@ static int snps_eusb2_hsphy_exit(struct phy *p)
  {
  	struct snps_eusb2_hsphy *phy = phy_get_drvdata(p);
  

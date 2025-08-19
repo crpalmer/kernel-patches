@@ -1,7 +1,7 @@
-From 9f13216a738296c4374385fb03bdf2d2c597bf97 Mon Sep 17 00:00:00 2001
+From 346c452b8fdd7302e29645c049347e8500bc7f52 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Fri, 23 May 2025 15:15:08 +0200
-Subject: [PATCH 18/39] UBUNTU: SAUCE: arm64: dts: qcom: Add support for
+Subject: [PATCH 18/40] UBUNTU: SAUCE: arm64: dts: qcom: Add support for
  X1-based Asus Zenbook A14
 
 Initial support for Asus Zenbook A14. Particular moddel exists

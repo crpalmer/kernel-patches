@@ -1,7 +1,7 @@
-From cd9b2b868530a2ea2dd3cd9e948dc44e15ade590 Mon Sep 17 00:00:00 2001
+From 86d99e81b323853d14296ac3214c0fbe804f15b9 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 18:00:38 +0200
-Subject: [PATCH 37/39] phy: phy-snps-eusb2: fix repeater imbalance on
+Subject: [PATCH 37/40] phy: phy-snps-eusb2: fix repeater imbalance on
  phy_init() failure
 
 Make sure to disable the repeater PHY also on phy_init() failure.
@@ -15,10 +15,10 @@ Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/phy/phy-snps-eusb2.c b/drivers/phy/phy-snps-eusb2.c
-index 56354a33172d..1cb4c98228a0 100644
+index e166b8f914fe..5875b2b7e9cd 100644
 --- a/drivers/phy/phy-snps-eusb2.c
 +++ b/drivers/phy/phy-snps-eusb2.c
-@@ -468,7 +468,7 @@ static int snps_eusb2_hsphy_init(struct phy *p)
+@@ -471,7 +471,7 @@ static int snps_eusb2_hsphy_init(struct phy *p)
  	ret = clk_bulk_prepare_enable(phy->data->num_clks, phy->clks);
  	if (ret) {
  		dev_err(&p->dev, "failed to enable ref clock, %d\n", ret);
@@ -27,7 +27,7 @@ index 56354a33172d..1cb4c98228a0 100644
  	}
  
  	ret = reset_control_assert(phy->phy_reset);
-@@ -493,7 +493,8 @@ static int snps_eusb2_hsphy_init(struct phy *p)
+@@ -496,7 +496,8 @@ static int snps_eusb2_hsphy_init(struct phy *p)
  
  disable_ref_clk:
  	clk_bulk_disable_unprepare(phy->data->num_clks, phy->clks);

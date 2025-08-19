@@ -1,7 +1,7 @@
-From fcded2acf03d61bcbcd3cbaa7a6cc520bdaf7a5a Mon Sep 17 00:00:00 2001
+From 1de1fba3e95e4861302565b3f07e01c8bddfa112 Mon Sep 17 00:00:00 2001
 From: Konrad Dybcio <konrad.dybcio@linaro.org>
 Date: Fri, 4 Aug 2023 22:09:10 +0200
-Subject: [PATCH 32/39] UBUNTU: SAUCE: media: venus: hfi_venus: Support only
+Subject: [PATCH 32/40] UBUNTU: SAUCE: media: venus: hfi_venus: Support only
  updating certain bits with presets
 
 BugLink: https://bugs.launchpad.net/bugs/2078929

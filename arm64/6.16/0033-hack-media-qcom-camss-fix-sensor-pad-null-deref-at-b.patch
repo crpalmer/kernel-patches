@@ -1,7 +1,7 @@
-From 57cb8f1fea8e82a11237d25a635188b1ab5b6b6f Mon Sep 17 00:00:00 2001
+From c2a6f39a11ca3782567165a10550d4b1f083d884 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Mon, 7 Apr 2025 15:51:47 +0200
-Subject: [PATCH 33/39] hack: media: qcom: camss: fix sensor pad null-deref at
+Subject: [PATCH 33/40] hack: media: qcom: camss: fix sensor pad null-deref at
  boot
 
 Due to an unresolved bug in camss (or v4l2), user space can access the

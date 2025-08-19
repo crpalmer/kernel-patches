@@ -1,7 +1,7 @@
-From db2b1408474ae5c52c30448f4772d5b153403eb9 Mon Sep 17 00:00:00 2001
+From 550256536a4fad1bea82fd3e189835b793a8ace3 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 23 Jun 2025 13:36:14 +0200
-Subject: [PATCH 20/39] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook:
+Subject: [PATCH 20/40] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook:
  support sound
 
 Works:

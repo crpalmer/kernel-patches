@@ -1,7 +1,7 @@
-From b80c595e08a0c57d119e3a2024f9583b407ee206 Mon Sep 17 00:00:00 2001
+From a72c0b20c7e9b864818a3cd95b79f2f385bce125 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 19 Aug 2025 06:37:05 -0400
-Subject: [PATCH 03/39] .config: binder changed when I went back to vanilla
+Subject: [PATCH 03/40] .config: binder changed when I went back to vanilla
  6.16
 
 ---
