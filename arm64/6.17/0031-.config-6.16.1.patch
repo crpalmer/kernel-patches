@@ -1,0 +1,32 @@
+From fc8b5a67e1a878db8e0fd69da75454098e1e1cf7 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Tue, 19 Aug 2025 08:20:42 -0400
+Subject: [PATCH 31/32] .config: 6.16.1
+
+---
+ .config | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index baf4a0003d92..3c86ab57db03 100644
+--- a/.config
++++ b/.config
+@@ -1,6 +1,6 @@
+ #
+ # Automatically generated file; DO NOT EDIT.
+-# Linux/arm64 6.16.0 Kernel Configuration
++# Linux/arm64 6.16.1 Kernel Configuration
+ #
+ CONFIG_CC_VERSION_TEXT="gcc (Ubuntu 14.2.0-19ubuntu2) 14.2.0"
+ CONFIG_CC_IS_GCC=y
+@@ -10907,6 +10907,7 @@ CONFIG_VHOST_SCSI=m
+ CONFIG_VHOST_VSOCK=m
+ CONFIG_VHOST_VDPA=m
+ # CONFIG_VHOST_CROSS_ENDIAN_LEGACY is not set
++CONFIG_VHOST_ENABLE_FORK_OWNER_CONTROL=y
+ 
+ #
+ # Microsoft Hyper-V guest support
+-- 
+2.48.1
+
