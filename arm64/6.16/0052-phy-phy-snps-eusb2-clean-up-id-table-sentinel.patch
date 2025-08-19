@@ -1,0 +1,31 @@
+From 07d700f4610b8dc0da17da68a8bfdf53056c6d4f Mon Sep 17 00:00:00 2001
+From: Johan Hovold <johan+linaro@kernel.org>
+Date: Thu, 22 May 2025 18:24:53 +0200
+Subject: [PATCH 52/56] phy: phy-snps-eusb2: clean up id table sentinel
+
+Use a more common format for the id table sentinel for consistency and
+symmetry.
+
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
+---
+ drivers/phy/phy-snps-eusb2.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/phy/phy-snps-eusb2.c b/drivers/phy/phy-snps-eusb2.c
+index ce0df54e5fed..805be60f02c3 100644
+--- a/drivers/phy/phy-snps-eusb2.c
++++ b/drivers/phy/phy-snps-eusb2.c
+@@ -613,7 +613,9 @@ static const struct of_device_id snps_eusb2_hsphy_of_match_table[] = {
+ 	}, {
+ 		.compatible = "samsung,exynos2200-eusb2-phy",
+ 		.data = &exynos2200_snps_eusb2_phy,
+-	}, { },
++	}, {
++		/* sentinel */
++	}
+ };
+ MODULE_DEVICE_TABLE(of, snps_eusb2_hsphy_of_match_table);
+ 
+-- 
+2.48.1
+

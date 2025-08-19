@@ -1,0 +1,38 @@
+From f002266e8c693627966c900c519f854f1218b663 Mon Sep 17 00:00:00 2001
+From: Konrad Dybcio <konrad.dybcio@linaro.org>
+Date: Tue, 25 Apr 2023 14:00:59 +0000
+Subject: [PATCH 06/56] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp-x13s: Enable
+ Venus
+
+BugLink: https://bugs.launchpad.net/bugs/2078929
+
+Enable Venus and point the driver to the correct firmware file.
+
+Signed-off-by: Konrad Dybcio <konrad.dybcio@linaro.org>
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
+(cherry picked from commit dba1b20213a99e1fb5c3b50e69207e0245a56321 github.com/jhovold/linux)
+Signed-off-by: Juerg Haefliger <juerg.haefliger@canonical.com>
+Signed-off-by: Timo Aaltonen <timo.aaltonen@canonical.com>
+---
+ arch/arm64/boot/dts/qcom/sc8280xp-lenovo-thinkpad-x13s.dts | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/qcom/sc8280xp-lenovo-thinkpad-x13s.dts b/arch/arm64/boot/dts/qcom/sc8280xp-lenovo-thinkpad-x13s.dts
+index cefecb7a23cf..de78d40d7c1f 100644
+--- a/arch/arm64/boot/dts/qcom/sc8280xp-lenovo-thinkpad-x13s.dts
++++ b/arch/arm64/boot/dts/qcom/sc8280xp-lenovo-thinkpad-x13s.dts
+@@ -1471,6 +1471,11 @@ &vamacro {
+ 	status = "okay";
+ };
+ 
++&venus {
++	firmware-name = "qcom/sc8280xp/LENOVO/21BX/qcvss8280.mbn";
++	status = "okay";
++};
++
+ &wsamacro {
+ 	status = "okay";
+ };
+-- 
+2.48.1
+

@@ -1,0 +1,50 @@
+From 20579a5cd07b7341098e1323e2085c6ad92cadc6 Mon Sep 17 00:00:00 2001
+From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
+Date: Mon, 31 Mar 2025 21:43:44 +0100
+Subject: [PATCH 11/56] arm64: dts: qcom: x1e80100-dell-xps-9345: Add WiFi/BT
+ pwrseq
+
+Add the WiFi/BT nodes for XPS and describe the regulators for the WCN7850
+combo chip using the new power sequencing bindings. All voltages are
+derived from chained fixed regulators controlled using a single GPIO.
+
+Based on the commit d09ab685a8f5 ("arm64: dts: qcom: x1e80100-qcp: Add
+WiFi/BT pwrseq").
+
+Reviewed-by: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
+Reviewed-by: Dmitry Baryshkov <dmitry.baryshkov@oss.qualcomm.com>
+Signed-off-by: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
+Tested-by: Laurentiu Tudor <laurentiu.tudor1@dell.com>
+Link: https://lore.kernel.org/r/20250331204610.526672-2-alex.vinarskis@gmail.com
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
+---
+ arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts b/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
+index fd6f2e7097a8..e1fe8ebbec7a 100644
+--- a/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
++++ b/arch/arm64/boot/dts/qcom/x1e80100-dell-xps13-9345.dts
+@@ -1216,15 +1216,15 @@ reset-n-pins {
+ 		};
+ 	};
+ 
+-	wcn_wlan_bt_en: wcn-wlan-bt-en-state {
+-		pins = "gpio116", "gpio117";
++	wcn_sw_en: wcn-sw-en-state {
++		pins = "gpio214";
+ 		function = "gpio";
+ 		drive-strength = <2>;
+ 		bias-disable;
+ 	};
+ 
+-	wcn_sw_en: wcn-sw-en-state {
+-		pins = "gpio214";
++	wcn_wlan_bt_en: wcn-wlan-bt-en-state {
++		pins = "gpio116", "gpio117";
+ 		function = "gpio";
+ 		drive-strength = <2>;
+ 		bias-disable;
+-- 
+2.48.1
+

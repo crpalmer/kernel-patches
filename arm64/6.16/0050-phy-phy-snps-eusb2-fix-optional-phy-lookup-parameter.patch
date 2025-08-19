@@ -1,0 +1,32 @@
+From 11f118e0f845e8a8f2c3baba64f7fae0595c0886 Mon Sep 17 00:00:00 2001
+From: Johan Hovold <johan+linaro@kernel.org>
+Date: Thu, 22 May 2025 18:11:44 +0200
+Subject: [PATCH 50/56] phy: phy-snps-eusb2: fix optional phy lookup parameter
+
+The devm_of_phy_optional_get() takes an optional name argument as its
+third parameter and not an index like the recently replaced
+devm_of_phy_get_by_index().
+
+Replace 0 with an explicit NULL for consistency and readability.
+
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
+---
+ drivers/phy/phy-snps-eusb2.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/phy/phy-snps-eusb2.c b/drivers/phy/phy-snps-eusb2.c
+index f2bc2e0f6166..3f01724b76ba 100644
+--- a/drivers/phy/phy-snps-eusb2.c
++++ b/drivers/phy/phy-snps-eusb2.c
+@@ -583,7 +583,7 @@ static int snps_eusb2_hsphy_probe(struct platform_device *pdev)
+ 		return dev_err_probe(dev, ret,
+ 				     "failed to get regulator supplies\n");
+ 
+-	phy->repeater = devm_of_phy_optional_get(dev, np, 0);
++	phy->repeater = devm_of_phy_optional_get(dev, np, NULL);
+ 	if (IS_ERR(phy->repeater))
+ 		return dev_err_probe(dev, PTR_ERR(phy->repeater),
+ 				     "failed to get repeater\n");
+-- 
+2.48.1
+

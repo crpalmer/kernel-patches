@@ -1,0 +1,36 @@
+From e588f02bf968d2c3565edaea4cd56c85829a1e6d Mon Sep 17 00:00:00 2001
+From: Christopher Obbard <christopher.obbard@linaro.org>
+Date: Thu, 27 Mar 2025 16:56:54 +0000
+Subject: [PATCH 13/56] arm64: dts: qcom: x1e78100-t14s-oled: add eDP panel
+
+Add the Samsung ATNA40YK20 eDP panel to the device tree for the
+Snapdragon T14s OLED model.
+
+Signed-off-by: Christopher Obbard <christopher.obbard@linaro.org>
+Reviewed-by: Dmitry Baryshkov <dmitry.baryshkov@oss.qualcomm.com>
+Link: https://lore.kernel.org/r/20250327-wip-obbardc-qcom-t14s-oled-panel-v3-2-45d5f2747398@linaro.org
+[ johan: drop hpd gpio ]
+Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
+---
+ .../boot/dts/qcom/x1e78100-lenovo-thinkpad-t14s-oled.dts  | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/qcom/x1e78100-lenovo-thinkpad-t14s-oled.dts b/arch/arm64/boot/dts/qcom/x1e78100-lenovo-thinkpad-t14s-oled.dts
+index be65fafafa73..d524afa12d19 100644
+--- a/arch/arm64/boot/dts/qcom/x1e78100-lenovo-thinkpad-t14s-oled.dts
++++ b/arch/arm64/boot/dts/qcom/x1e78100-lenovo-thinkpad-t14s-oled.dts
+@@ -10,3 +10,11 @@ / {
+ 	compatible = "lenovo,thinkpad-t14s-oled", "lenovo,thinkpad-t14s",
+ 		     "qcom,x1e78100", "qcom,x1e80100";
+ };
++
++&panel {
++	compatible = "samsung,atna40yk20", "samsung,atna33xc20";
++	enable-gpios = <&pmc8380_3_gpios 4 GPIO_ACTIVE_HIGH>;
++
++	pinctrl-0 = <&edp_bl_en>;
++	pinctrl-names = "default";
++};
+-- 
+2.48.1
+
