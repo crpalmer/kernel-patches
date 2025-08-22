@@ -1,7 +1,7 @@
-From 6d6bc367bfbb636c1f8a7f730b8f606be841f0f5 Mon Sep 17 00:00:00 2001
+From 0c6d7f692085bea0341e60b9c2125720f579df04 Mon Sep 17 00:00:00 2001
 From: Victorien <vickdu31@hotmail.fr>
 Date: Tue, 26 Nov 2024 00:36:17 +0200
-Subject: [PATCH 26/40] UBUNTU: SAUCE: arm64: dts: qcom:
+Subject: [PATCH 26/42] UBUNTU: SAUCE: arm64: dts: qcom:
  x1p64100-acer-swift-sf14-11 dt for Acer Swift 14 SF14-11 (touchpad fix)
 
 BugLink: https://bugs.launchpad.net/bugs/2100858
@@ -1309,5 +1309,5 @@ index 000000000000..7d59a2ff9e94
 +	status = "okay";
 +};
 -- 
-2.48.1
+2.50.1
 

@@ -1,7 +1,7 @@
-From 8435e8de2bf289faadce58865029003fdc3541fa Mon Sep 17 00:00:00 2001
+From 20c05726ef3386cf4ebf967d623d0cba8ddd8bef Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Wed, 20 Jul 2022 18:41:13 +0200
-Subject: [PATCH 34/40] UBUNTU: SAUCE: phy: qcom-qmp-combo: drop regulator
+Subject: [PATCH 34/42] UBUNTU: SAUCE: phy: qcom-qmp-combo: drop regulator
  loads
 
 BugLink: https://bugs.launchpad.net/bugs/2078929
@@ -101,5 +101,5 @@ index b09fa00e9fe7..d600b5f31bba 100644
  
  static int qmp_combo_reset_init(struct qmp_combo *qmp)
 -- 
-2.48.1
+2.50.1
 

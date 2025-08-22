@@ -1,7 +1,7 @@
-From 23162468cfc123c75e9c549c99db35543dddc8da Mon Sep 17 00:00:00 2001
+From b3b76f7c78a7386a6628422d2ddaba81c19b54e2 Mon Sep 17 00:00:00 2001
 From: Christopher Obbard <christopher.obbard@linaro.org>
 Date: Sun, 30 Mar 2025 20:31:07 +0100
-Subject: [PATCH 31/40] drm/dp: clamp PWM bit count to advertised MIN and MAX
+Subject: [PATCH 31/42] drm/dp: clamp PWM bit count to advertised MIN and MAX
  capabilities
 
 According to the eDP specification (VESA Embedded DisplayPort Standard
@@ -104,5 +104,5 @@ index ea78c6c8ca7a..afe36cb8d85f 100644
  	/* Ensure frequency is within 25% of desired value */
  	fxp_min = DIV_ROUND_CLOSEST(fxp * 3, 4);
 -- 
-2.48.1
+2.50.1
 

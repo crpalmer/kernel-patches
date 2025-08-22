@@ -1,7 +1,7 @@
-From 15c63149ca2ad67445d0d10cf3c9c48be76b988e Mon Sep 17 00:00:00 2001
+From 6ad7f5ad4de2ae148a3a44e56a22d55bccc97616 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Tue, 8 Jul 2025 23:22:09 +0200
-Subject: [PATCH 24/40] arm64: dts: qcom: Rework X1-based Asus Zenbook A14's
+Subject: [PATCH 24/42] arm64: dts: qcom: Rework X1-based Asus Zenbook A14's
  displays
 
 The laptop comes in two variants:
@@ -449,5 +449,5 @@ index 000000000000..bd75ff898601
 +	};
 +};
 -- 
-2.48.1
+2.50.1
 

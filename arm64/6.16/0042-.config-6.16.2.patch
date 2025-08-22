@@ -1,0 +1,33 @@
+From 941609e6aea0d10cb7c6c2f2c076d1526a317433 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Fri, 22 Aug 2025 06:59:44 -0400
+Subject: [PATCH 42/42] .config: 6.16.2
+
+---
+ .config | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index cdd66a2336f6..f3fdca5aae1c 100644
+--- a/.config
++++ b/.config
+@@ -1,6 +1,6 @@
+ #
+ # Automatically generated file; DO NOT EDIT.
+-# Linux/arm64 6.16.1 Kernel Configuration
++# Linux/arm64 6.16.2 Kernel Configuration
+ #
+ CONFIG_CC_VERSION_TEXT="gcc (GCC) 15.2.1 20250808 (Red Hat 15.2.1-1)"
+ CONFIG_CC_IS_GCC=y
+@@ -11450,6 +11450,8 @@ CONFIG_APPLE_AIC=y
+ # CONFIG_IPACK_BUS is not set
+ CONFIG_ARCH_HAS_RESET_CONTROLLER=y
+ CONFIG_RESET_CONTROLLER=y
++CONFIG_RESET_BRCMSTB=m
++CONFIG_RESET_BRCMSTB_RESCAL=m
+ CONFIG_RESET_GPIO=m
+ CONFIG_RESET_IMX_SCU=m
+ CONFIG_RESET_IMX7=y
+-- 
+2.50.1
+

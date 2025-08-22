@@ -1,7 +1,7 @@
-From 550256536a4fad1bea82fd3e189835b793a8ace3 Mon Sep 17 00:00:00 2001
+From 4cd4672c402fecbb0f07dcdcb426c3904bff0731 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 23 Jun 2025 13:36:14 +0200
-Subject: [PATCH 20/40] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook:
+Subject: [PATCH 20/42] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook:
  support sound
 
 Works:
@@ -264,5 +264,5 @@ index c8d6d66d05c8..c771fd1d8029 100644
  		pins = "gpio116";
  		function = "gpio";
 -- 
-2.48.1
+2.50.1
 

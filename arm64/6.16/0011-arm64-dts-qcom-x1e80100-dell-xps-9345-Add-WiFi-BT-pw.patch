@@ -1,7 +1,7 @@
-From 681ba3c33471c083375619e460e7fa84fdccc621 Mon Sep 17 00:00:00 2001
+From 2decaf5c64b0485358e417da9162eed2d21e51bb Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 31 Mar 2025 21:43:44 +0100
-Subject: [PATCH 11/40] arm64: dts: qcom: x1e80100-dell-xps-9345: Add WiFi/BT
+Subject: [PATCH 11/42] arm64: dts: qcom: x1e80100-dell-xps-9345: Add WiFi/BT
  pwrseq
 
 Add the WiFi/BT nodes for XPS and describe the regulators for the WCN7850
@@ -46,5 +46,5 @@ index fd6f2e7097a8..e1fe8ebbec7a 100644
  		drive-strength = <2>;
  		bias-disable;
 -- 
-2.48.1
+2.50.1
 

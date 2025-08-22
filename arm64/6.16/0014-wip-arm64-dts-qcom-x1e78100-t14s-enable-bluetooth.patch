@@ -1,7 +1,7 @@
-From e57e0b2b69bb55c124cc057a8d995417fe0d2c73 Mon Sep 17 00:00:00 2001
+From fa3a54fa7ce5a267d0dcf2b144d98e2a45ad4e7e Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Mon, 18 Nov 2024 12:42:11 +0100
-Subject: [PATCH 14/40] wip: arm64: dts: qcom: x1e78100-t14s: enable bluetooth
+Subject: [PATCH 14/42] wip: arm64: dts: qcom: x1e78100-t14s: enable bluetooth
 
 Adapt Stephan Gerhold's work to enable Bluetooth on the CRD to the T14s:
 
@@ -226,5 +226,5 @@ index 2308d5a0e3af..745f436a3a0a 100644
  	vdd-supply = <&vreg_l3j_0p8>;
  	vdda12-supply = <&vreg_l2j_1p2>;
 -- 
-2.48.1
+2.50.1
 

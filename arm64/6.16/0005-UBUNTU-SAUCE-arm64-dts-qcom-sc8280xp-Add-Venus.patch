@@ -1,7 +1,7 @@
-From 43a5a47b536d1cf020e455ab47060331acd54744 Mon Sep 17 00:00:00 2001
+From 4dfefa84a15acc342d07f094e05e25a475de66c9 Mon Sep 17 00:00:00 2001
 From: Konrad Dybcio <konrad.dybcio@linaro.org>
 Date: Tue, 25 Apr 2023 13:55:39 +0000
-Subject: [PATCH 05/40] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp: Add Venus
+Subject: [PATCH 05/42] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp: Add Venus
 
 BugLink: https://bugs.launchpad.net/bugs/2078929
 
@@ -129,5 +129,5 @@ index 87555a119d94..3a652c3da52c 100644
  			compatible = "qcom,sc8280xp-cci", "qcom,msm8996-cci";
  			reg = <0 0x0ac4a000 0 0x1000>;
 -- 
-2.48.1
+2.50.1
 

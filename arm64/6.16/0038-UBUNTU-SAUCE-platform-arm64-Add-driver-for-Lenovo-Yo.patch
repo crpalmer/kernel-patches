@@ -1,7 +1,7 @@
-From 367c86bcd3836472e35b6f5805fbd18b78ae308b Mon Sep 17 00:00:00 2001
+From 44a25829f4351a2eea99c0ecc7afd5820f4334cc Mon Sep 17 00:00:00 2001
 From: Maya Matuszczyk <maccraft123mc@gmail.com>
 Date: Fri, 27 Sep 2024 20:53:41 +0200
-Subject: [PATCH 38/40] UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo
+Subject: [PATCH 38/42] UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo
  Yoga Slim 7x's EC
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -287,5 +287,5 @@ index 000000000000..8f6d523395bc
 +MODULE_DESCRIPTION("Lenovo Yoga Slim 7x Embedded Controller");
 +MODULE_LICENSE("GPL");
 -- 
-2.48.1
+2.50.1
 

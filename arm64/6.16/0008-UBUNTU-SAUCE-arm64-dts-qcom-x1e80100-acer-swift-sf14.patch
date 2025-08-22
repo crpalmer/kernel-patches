@@ -1,7 +1,7 @@
-From 699883e1435d5845251fb46eee0cf90abd04fb1a Mon Sep 17 00:00:00 2001
+From 9df42e48e987378b0eb9ca5f59c10b7e12627c57 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Sat, 28 Dec 2024 22:55:02 +0100
-Subject: [PATCH 08/40] UBUNTU: SAUCE: arm64: dts: qcom:
+Subject: [PATCH 08/42] UBUNTU: SAUCE: arm64: dts: qcom:
  x1e80100-acer-swift-sf14-11: Enable HBR3 on external DPs
 
 BugLink: https://bugs.launchpad.net/bugs/2100858
@@ -38,5 +38,5 @@ index ac1dddf27da3..2308d5a0e3af 100644
  
  &mdss_dp3 {
 -- 
-2.48.1
+2.50.1
 
