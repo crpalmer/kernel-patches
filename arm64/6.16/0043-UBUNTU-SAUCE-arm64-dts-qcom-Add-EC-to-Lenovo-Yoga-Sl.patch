@@ -1,0 +1,62 @@
+From 19038327cbbbc1585099c9dc43a66dc1461291ea Mon Sep 17 00:00:00 2001
+From: Maya Matuszczyk <maccraft123mc@gmail.com>
+Date: Fri, 27 Sep 2024 20:53:42 +0200
+Subject: [PATCH 43/46] UBUNTU: SAUCE: arm64: dts: qcom: Add EC to Lenovo Yoga
+ Slim 7x
+
+BugLink: https://bugs.launchpad.net/bugs/2100858
+
+This device has an EC on i2c5 bus at address 0x76, driver for the EC was
+added in a previous patch.
+
+Signed-off-by: Maya Matuszczyk <maccraft123mc@gmail.com>
+Reviewed-by: Konrad Dybcio <konradybcio@kernel.org>
+Signed-off-by: Tobias Heider <tobias.heider@canonical.com>
+Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
+---
+ .../dts/qcom/x1e80100-lenovo-yoga-slim7x.dts  | 22 +++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
+index 29d8f7d8d74f..9abc28f84a09 100644
+--- a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
++++ b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
+@@ -850,6 +850,22 @@ retimer_ss0_con_sbu_out: endpoint {
+ 	};
+ };
+ 
++&i2c5 {
++	clock-frequency = <400000>;
++
++	status = "okay";
++
++	embedded-controller@76 {
++		compatible = "lenovo,yoga-slim7x-ec";
++		reg = <0x76>;
++
++		interrupts-extended = <&tlmm 66 IRQ_TYPE_EDGE_FALLING>;
++
++		pinctrl-0 = <&ec_int_n_default>;
++		pinctrl-names = "default";
++	};
++};
++
+ &i2c7 {
+ 	clock-frequency = <400000>;
+ 
+@@ -1248,6 +1264,12 @@ bt_en_default: bt-en-sleep {
+ 		qcom,drive-strength = <16>;
+ 	};
+ 
++	ec_int_n_default: ec-int-n-state {
++		pins = "gpio66";
++		function = "gpio";
++		bias-disable;
++	};
++
+ 	edp_reg_en: edp-reg-en-state {
+ 		pins = "gpio70";
+ 		function = "gpio";
+-- 
+2.51.0
+
