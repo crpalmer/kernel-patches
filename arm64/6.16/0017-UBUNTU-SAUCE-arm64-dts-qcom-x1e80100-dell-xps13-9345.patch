@@ -1,4 +1,4 @@
-From ba92a3b244af60bcde060b0bf135346699d5dbae Mon Sep 17 00:00:00 2001
+From 8c545ce64b5f1dbab832dd58e22a72fcfb755321 Mon Sep 17 00:00:00 2001
 From: Sibi Sankar <quic_sibis@quicinc.com>
 Date: Mon, 11 Nov 2024 20:09:13 +0530
 Subject: [PATCH 17/46] UBUNTU: SAUCE: arm64: dts: qcom:

@@ -1,4 +1,4 @@
-From be05786099cd559de8286fe673eed94e35dbda95 Mon Sep 17 00:00:00 2001
+From 5b53801d0564ce66ff66ab287c5d2894710a64c7 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 16:56:16 +0200
 Subject: [PATCH 36/46] phy: phy-snps-eusb2: fix clock imbalance on phy_exit()

@@ -1,4 +1,4 @@
-From 1abf34f88585f38507af3e480f7d8386501991af Mon Sep 17 00:00:00 2001
+From 73deab25a1ffeb852015a216f851556f8f99beb4 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Sat, 28 Dec 2024 22:55:02 +0100
 Subject: [PATCH 27/46] UBUNTU: SAUCE: arm64: dts: qcom:

@@ -1,4 +1,4 @@
-From 8003873188739e465a1e779c7e3cb731c44e256b Mon Sep 17 00:00:00 2001
+From ccdb37d1313a512b9fb031ae854293ddf6cf8334 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Wed, 20 Jul 2022 18:41:13 +0200
 Subject: [PATCH 34/46] UBUNTU: SAUCE: phy: qcom-qmp-combo: drop regulator

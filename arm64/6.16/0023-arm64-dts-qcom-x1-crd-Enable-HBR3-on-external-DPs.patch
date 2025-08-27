@@ -1,4 +1,4 @@
-From 98f90e63d900b2dcdd38b74788ac3ef5dfba61c6 Mon Sep 17 00:00:00 2001
+From c5b6d4b1ace25d56737c7870c4bae3c6b806db70 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 30 Jun 2025 22:54:10 +0200
 Subject: [PATCH 23/46] arm64: dts: qcom: x1-crd: Enable HBR3 on external DPs

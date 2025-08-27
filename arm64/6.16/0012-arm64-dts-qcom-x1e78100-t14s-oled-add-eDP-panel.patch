@@ -1,4 +1,4 @@
-From db2c23285c7f4bddd2671e33f7fe5e2e058724d1 Mon Sep 17 00:00:00 2001
+From f482b899e3f2bf51d02c5ac822aaf6eb032f831e Mon Sep 17 00:00:00 2001
 From: Christopher Obbard <christopher.obbard@linaro.org>
 Date: Thu, 27 Mar 2025 16:56:54 +0000
 Subject: [PATCH 12/46] arm64: dts: qcom: x1e78100-t14s-oled: add eDP panel

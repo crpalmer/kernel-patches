@@ -1,4 +1,4 @@
-From 7a3bc137a2179c3901057f2b32acc5c4feba1486 Mon Sep 17 00:00:00 2001
+From 40750d0ce88d7ce14011205af8314019e7b44440 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 18:00:38 +0200
 Subject: [PATCH 37/46] phy: phy-snps-eusb2: fix repeater imbalance on

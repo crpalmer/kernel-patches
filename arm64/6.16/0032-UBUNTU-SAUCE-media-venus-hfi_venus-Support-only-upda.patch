@@ -1,4 +1,4 @@
-From 42ea7525dcc66f8f6bd19a1c825df983b85360b1 Mon Sep 17 00:00:00 2001
+From fd02a555eba60637ed1763840fe75f8e43e23259 Mon Sep 17 00:00:00 2001
 From: Konrad Dybcio <konrad.dybcio@linaro.org>
 Date: Fri, 4 Aug 2023 22:09:10 +0200
 Subject: [PATCH 32/46] UBUNTU: SAUCE: media: venus: hfi_venus: Support only

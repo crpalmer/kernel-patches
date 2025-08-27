@@ -1,4 +1,4 @@
-From 7331544df4d3eb288466be5bbd68e1a61ede1e52 Mon Sep 17 00:00:00 2001
+From 700d70f296a888a5ad108fb3ccbe5bc65238d8f0 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Wed, 27 Aug 2025 06:08:35 -0400
 Subject: [PATCH 46/46] .config: update modules to get subsystems booting

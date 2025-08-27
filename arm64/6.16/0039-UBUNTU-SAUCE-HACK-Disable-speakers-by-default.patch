@@ -1,4 +1,4 @@
-From dcf55165ba30668a564c64b3977bebc927d410a8 Mon Sep 17 00:00:00 2001
+From 486a855894935b0c88b88f04174fb4d4b3edf6b3 Mon Sep 17 00:00:00 2001
 From: Tobias Heider <tobias.heider@canonical.com>
 Date: Tue, 10 Dec 2024 13:04:28 +0100
 Subject: [PATCH 39/46] UBUNTU: SAUCE: HACK: Disable speakers by default

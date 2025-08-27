@@ -1,4 +1,4 @@
-From add9c3ee6ffd2344668759b9ed7e843b212c5f87 Mon Sep 17 00:00:00 2001
+From 809a2f9320473b7d294ecdebb2486abf88029e2b Mon Sep 17 00:00:00 2001
 From: Rob Clark <robdclark@chromium.org>
 Date: Thu, 15 May 2025 14:06:20 -0700
 Subject: [PATCH 29/46] drm/panel-edp: Add BOE NV133WUM-N61 panel entry

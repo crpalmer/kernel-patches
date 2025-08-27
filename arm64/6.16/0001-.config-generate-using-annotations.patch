@@ -1,4 +1,4 @@
-From b1a4467cff62313ed05632bf008235ac17f9e3fa Mon Sep 17 00:00:00 2001
+From 850ad21e0b741bd04c7c3d53e06d831c3dd75647 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Mon, 18 Aug 2025 14:45:38 -0400
 Subject: [PATCH 01/46] .config: generate using annotations

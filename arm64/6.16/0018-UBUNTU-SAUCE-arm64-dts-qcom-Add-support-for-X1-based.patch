@@ -1,4 +1,4 @@
-From 9b5afc4cc96f0343a8913105ecb257347a4d8b46 Mon Sep 17 00:00:00 2001
+From 2f1dd94fe671d17e6add9f34f89f8328fad8575e Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Fri, 23 May 2025 15:15:08 +0200
 Subject: [PATCH 18/46] UBUNTU: SAUCE: arm64: dts: qcom: Add support for

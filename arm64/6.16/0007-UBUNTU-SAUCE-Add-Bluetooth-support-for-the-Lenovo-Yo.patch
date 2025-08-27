@@ -1,4 +1,4 @@
-From 3fba4c85943e490e3b432f12d96f0c389bcb6ca9 Mon Sep 17 00:00:00 2001
+From ff1200bffbbc755802651049d1685a7f7ee04426 Mon Sep 17 00:00:00 2001
 From: hogliux <fabian.renn@gmail.com>
 Date: Tue, 3 Sep 2024 13:07:59 +0200
 Subject: [PATCH 07/46] UBUNTU: SAUCE: Add Bluetooth support for the Lenovo

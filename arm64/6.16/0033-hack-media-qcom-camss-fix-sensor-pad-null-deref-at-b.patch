@@ -1,4 +1,4 @@
-From e2a0faa6dada4717fb34c4505d29864e0dfda9f3 Mon Sep 17 00:00:00 2001
+From 8d5d9020bf2a0b25e3d219b6ca50c01d087bebcd Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Mon, 7 Apr 2025 15:51:47 +0200
 Subject: [PATCH 33/46] hack: media: qcom: camss: fix sensor pad null-deref at

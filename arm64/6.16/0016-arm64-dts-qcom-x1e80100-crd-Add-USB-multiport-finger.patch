@@ -1,4 +1,4 @@
-From e9f22c17e8af83e4dae6149dba68426651f00398 Mon Sep 17 00:00:00 2001
+From 4ef9510803d0f93bdfb51f4876765d65f5311f04 Mon Sep 17 00:00:00 2001
 From: Stephan Gerhold <stephan.gerhold@linaro.org>
 Date: Mon, 14 Jul 2025 13:48:15 +0200
 Subject: [PATCH 16/46] arm64: dts: qcom: x1e80100-crd: Add USB multiport

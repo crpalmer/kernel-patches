@@ -1,4 +1,4 @@
-From 01e8fa72bfd57fab54d64eabbc4dbe493c733bb1 Mon Sep 17 00:00:00 2001
+From 4ef21340a7316cf01eb507e21aca9574a90a81ff Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Mon, 18 Nov 2024 12:42:11 +0100
 Subject: [PATCH 14/46] wip: arm64: dts: qcom: x1e78100-t14s: enable bluetooth

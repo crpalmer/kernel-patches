@@ -1,4 +1,4 @@
-From 38f1093be639fe5c6e41377811540baaf5d4de38 Mon Sep 17 00:00:00 2001
+From ee571f3edd107657d51dd92d0507faf76e54f917 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 31 Mar 2025 21:43:44 +0100
 Subject: [PATCH 11/46] arm64: dts: qcom: x1e80100-dell-xps-9345: Add WiFi/BT

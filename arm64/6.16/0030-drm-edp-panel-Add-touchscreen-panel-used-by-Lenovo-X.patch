@@ -1,4 +1,4 @@
-From ee734546baac13470a86997d61623ddaa19fb74d Mon Sep 17 00:00:00 2001
+From a9662c0d116f5c879a544e2aafa61e1f6db44020 Mon Sep 17 00:00:00 2001
 From: Daniel Thompson <daniel@riscstar.com>
 Date: Tue, 1 Jul 2025 09:16:30 +0100
 Subject: [PATCH 30/46] drm/edp-panel: Add touchscreen panel used by Lenovo

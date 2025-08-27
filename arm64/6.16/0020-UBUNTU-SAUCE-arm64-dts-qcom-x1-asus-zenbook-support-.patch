@@ -1,4 +1,4 @@
-From 2d1c1f7434789abeeba91dc530ea9ff61cf7af9d Mon Sep 17 00:00:00 2001
+From 6221907f8d129e22c3c294421d92edf5a6377ef0 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 23 Jun 2025 13:36:14 +0200
 Subject: [PATCH 20/46] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook:
