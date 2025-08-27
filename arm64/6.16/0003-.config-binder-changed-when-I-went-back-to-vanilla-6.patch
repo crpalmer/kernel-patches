@@ -1,7 +1,7 @@
-From 8daecea4fc94491dfa0436a1974110e5d905d02a Mon Sep 17 00:00:00 2001
+From 3c34341022194da6dadae8467ed31ac9ba4b7f9a Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 19 Aug 2025 06:37:05 -0400
-Subject: [PATCH 03/42] .config: binder changed when I went back to vanilla
+Subject: [PATCH 03/46] .config: binder changed when I went back to vanilla
  6.16
 
 ---
@@ -77,5 +77,5 @@ index e921f2888e68..baf4a0003d92 100644
  # CONFIG_LOCK_DOWN_KERNEL_FORCE_INTEGRITY is not set
  # CONFIG_LOCK_DOWN_KERNEL_FORCE_CONFIDENTIALITY is not set
 -- 
-2.50.1
+2.51.0
 

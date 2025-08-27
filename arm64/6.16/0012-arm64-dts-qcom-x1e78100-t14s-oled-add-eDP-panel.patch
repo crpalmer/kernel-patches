@@ -1,7 +1,7 @@
-From 698fe79ff90ac3c796b82b5d6c8a1c05e67b02f8 Mon Sep 17 00:00:00 2001
+From db2c23285c7f4bddd2671e33f7fe5e2e058724d1 Mon Sep 17 00:00:00 2001
 From: Christopher Obbard <christopher.obbard@linaro.org>
 Date: Thu, 27 Mar 2025 16:56:54 +0000
-Subject: [PATCH 12/42] arm64: dts: qcom: x1e78100-t14s-oled: add eDP panel
+Subject: [PATCH 12/46] arm64: dts: qcom: x1e78100-t14s-oled: add eDP panel
 
 Add the Samsung ATNA40YK20 eDP panel to the device tree for the
 Snapdragon T14s OLED model.
@@ -32,5 +32,5 @@ index be65fafafa73..d524afa12d19 100644
 +	pinctrl-names = "default";
 +};
 -- 
-2.50.1
+2.51.0
 

@@ -1,7 +1,7 @@
-From 385a5969f5af9d448e91be8f9aaab461e14d2f70 Mon Sep 17 00:00:00 2001
+From be05786099cd559de8286fe673eed94e35dbda95 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 16:56:16 +0200
-Subject: [PATCH 36/42] phy: phy-snps-eusb2: fix clock imbalance on phy_exit()
+Subject: [PATCH 36/46] phy: phy-snps-eusb2: fix clock imbalance on phy_exit()
 
 Make sure to disable all clocks enabled at phy_init() also on
 phy_exit().
@@ -27,5 +27,5 @@ index e78d222eec5f..e166b8f914fe 100644
  	regulator_bulk_disable(ARRAY_SIZE(phy->vregs), phy->vregs);
  
 -- 
-2.50.1
+2.51.0
 

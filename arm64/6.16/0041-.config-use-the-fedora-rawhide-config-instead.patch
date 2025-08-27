@@ -1,7 +1,7 @@
-From 037810f802325d2c1f7f84aa37f4bf82128d9e05 Mon Sep 17 00:00:00 2001
+From f73d3fa36692352d443990185e1adfcfc1869cb1 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Wed, 20 Aug 2025 19:17:19 -0400
-Subject: [PATCH 41/42] .config: use the fedora rawhide config instead
+Subject: [PATCH 41/46] .config: use the fedora rawhide config instead
 
 ---
  .config | 7102 +++++++++++++++++++++----------------------------------
@@ -13720,5 +13720,5 @@ index 3c86ab57db03..cdd66a2336f6 100644
  # end of Kernel hacking
  
 -- 
-2.50.1
+2.51.0
 

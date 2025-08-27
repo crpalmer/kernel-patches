@@ -1,7 +1,7 @@
-From 432527bfe432e6cbfb33a6ed154361d59863ebd3 Mon Sep 17 00:00:00 2001
+From ee734546baac13470a86997d61623ddaa19fb74d Mon Sep 17 00:00:00 2001
 From: Daniel Thompson <daniel@riscstar.com>
 Date: Tue, 1 Jul 2025 09:16:30 +0100
-Subject: [PATCH 30/42] drm/edp-panel: Add touchscreen panel used by Lenovo
+Subject: [PATCH 30/46] drm/edp-panel: Add touchscreen panel used by Lenovo
  X13s
 
 After (checks watch) a little over two years I finally investigated the
@@ -43,5 +43,5 @@ index 275cfd58f1e1..3a284160daac 100644
  	EDP_PANEL_ENTRY('B', 'O', 'E', 0x0b09, &delay_200_500_e50_po2e200, "NV140FHM-NZ"),
  	EDP_PANEL_ENTRY('B', 'O', 'E', 0x0b34, &delay_200_500_e80, "NV122WUM-N41"),
 -- 
-2.50.1
+2.51.0
 

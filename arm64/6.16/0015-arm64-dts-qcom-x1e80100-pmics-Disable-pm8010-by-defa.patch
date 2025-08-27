@@ -1,7 +1,7 @@
-From 5e9eb494248ce323c90a5902593232e6283c933d Mon Sep 17 00:00:00 2001
+From 6f8dca41d1fbf94a07245bb9e24d78474af8c57d Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Tue, 1 Jul 2025 20:35:53 +0200
-Subject: [PATCH 15/42] arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by
+Subject: [PATCH 15/46] arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by
  default
 
 pm8010 is a camera specific PMIC, and may not be present on some
@@ -38,5 +38,5 @@ index e3888bc143a0..621890ada153 100644
  			compatible = "qcom,spmi-temp-alarm";
  			reg = <0x2400>;
 -- 
-2.50.1
+2.51.0
 

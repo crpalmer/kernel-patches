@@ -1,7 +1,7 @@
-From 2329487205ae135e90c9ff32eb6b3e7b9cef11b3 Mon Sep 17 00:00:00 2001
+From 3fba4c85943e490e3b432f12d96f0c389bcb6ca9 Mon Sep 17 00:00:00 2001
 From: hogliux <fabian.renn@gmail.com>
 Date: Tue, 3 Sep 2024 13:07:59 +0200
-Subject: [PATCH 07/42] UBUNTU: SAUCE: Add Bluetooth support for the Lenovo
+Subject: [PATCH 07/46] UBUNTU: SAUCE: Add Bluetooth support for the Lenovo
  Yoga Slim 7x
 
 BugLink: https://bugs.launchpad.net/bugs/2100858
@@ -59,5 +59,5 @@ index dad0f11e8e85..29d8f7d8d74f 100644
  	compatible = "qcom,geni-debug-uart";
  	status = "okay";
 -- 
-2.50.1
+2.51.0
 

@@ -1,7 +1,7 @@
-From bd2701a4d9e999013cf35ae026202f3c1f8b2e64 Mon Sep 17 00:00:00 2001
+From 5c49ec3c890b34f35fb51b396a44a47af43484de Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 19 Aug 2025 08:20:42 -0400
-Subject: [PATCH 40/42] .config: 6.16.1
+Subject: [PATCH 40/46] .config: 6.16.1
 
 ---
  .config | 3 ++-
@@ -28,5 +28,5 @@ index baf4a0003d92..3c86ab57db03 100644
  #
  # Microsoft Hyper-V guest support
 -- 
-2.50.1
+2.51.0
 
