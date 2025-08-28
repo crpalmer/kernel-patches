@@ -1,7 +1,7 @@
 From ff1200bffbbc755802651049d1685a7f7ee04426 Mon Sep 17 00:00:00 2001
 From: hogliux <fabian.renn@gmail.com>
 Date: Tue, 3 Sep 2024 13:07:59 +0200
-Subject: [PATCH 07/46] UBUNTU: SAUCE: Add Bluetooth support for the Lenovo
+Subject: [PATCH 07/44] UBUNTU: SAUCE: Add Bluetooth support for the Lenovo
  Yoga Slim 7x
 
 BugLink: https://bugs.launchpad.net/bugs/2100858

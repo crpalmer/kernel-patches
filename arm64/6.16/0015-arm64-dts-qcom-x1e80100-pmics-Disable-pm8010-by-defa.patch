@@ -1,7 +1,7 @@
 From af9e179aaf707ea7ac3bec398b6109a92b8c8de1 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Tue, 1 Jul 2025 20:35:53 +0200
-Subject: [PATCH 15/46] arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by
+Subject: [PATCH 15/44] arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by
  default
 
 pm8010 is a camera specific PMIC, and may not be present on some

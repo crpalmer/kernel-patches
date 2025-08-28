@@ -1,7 +1,7 @@
 From c40f347c33e2771f8fc282f340a28bbf133884f9 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Fri, 22 Aug 2025 06:59:44 -0400
-Subject: [PATCH 42/46] .config: 6.16.2
+Subject: [PATCH 42/44] .config: 6.16.2
 
 ---
  .config | 4 +++-

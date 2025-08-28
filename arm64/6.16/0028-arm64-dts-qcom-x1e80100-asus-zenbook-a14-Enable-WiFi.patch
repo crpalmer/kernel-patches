@@ -1,7 +1,7 @@
 From 13dbce3bf13823ea2542ed14f29b80f22f179b30 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Fri, 25 Jul 2025 21:41:41 +0200
-Subject: [PATCH 28/46] arm64: dts: qcom: x1e80100-asus-zenbook-a14: Enable
+Subject: [PATCH 28/44] arm64: dts: qcom: x1e80100-asus-zenbook-a14: Enable
  WiFi, Bluetooth
 
 Unlike UX3407QA with ath11k, UX3407RA comes with ath12k. Definitions

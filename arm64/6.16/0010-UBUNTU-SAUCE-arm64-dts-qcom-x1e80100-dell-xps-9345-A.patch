@@ -1,7 +1,7 @@
 From 7ae3cef9f76de7f590a4b87202f33e9317d03f82 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Sun, 9 Mar 2025 16:47:02 +0100
-Subject: [PATCH 10/46] UBUNTU: SAUCE: arm64: dts: qcom:
+Subject: [PATCH 10/44] UBUNTU: SAUCE: arm64: dts: qcom:
  x1e80100-dell-xps-9345: Add WiFi/BT pwrseq
 
 BugLink: https://bugs.launchpad.net/bugs/2100858

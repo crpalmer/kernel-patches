@@ -1,7 +1,7 @@
 From d6096416ecda270c5eaff7047987aef6636b8bde Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Mon, 23 Jun 2025 13:36:13 +0200
-Subject: [PATCH 19/46] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook: fixup
+Subject: [PATCH 19/44] UBUNTU: SAUCE: arm64: dts: qcom: x1-asus-zenbook: fixup
  GPU nodes
 
 It appears not the latest version of the patch was merged. Align with
