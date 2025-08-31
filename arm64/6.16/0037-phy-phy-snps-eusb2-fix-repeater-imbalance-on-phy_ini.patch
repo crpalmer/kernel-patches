@@ -1,7 +1,7 @@
 From 40750d0ce88d7ce14011205af8314019e7b44440 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 22 May 2025 18:00:38 +0200
-Subject: [PATCH 37/44] phy: phy-snps-eusb2: fix repeater imbalance on
+Subject: [PATCH 37/45] phy: phy-snps-eusb2: fix repeater imbalance on
  phy_init() failure
 
 Make sure to disable the repeater PHY also on phy_init() failure.

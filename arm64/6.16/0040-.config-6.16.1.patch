@@ -1,7 +1,7 @@
 From be5d673f39dbdcc36ff664e0475af943e6b0ab95 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 19 Aug 2025 08:20:42 -0400
-Subject: [PATCH 40/44] .config: 6.16.1
+Subject: [PATCH 40/45] .config: 6.16.1
 
 ---
  .config | 3 ++-

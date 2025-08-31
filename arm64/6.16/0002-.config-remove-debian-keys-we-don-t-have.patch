@@ -1,7 +1,7 @@
 From 9bbfc558c92423f76eec185c63aef21d863adbc9 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Mon, 18 Aug 2025 14:46:18 -0400
-Subject: [PATCH 02/44] .config: remove debian keys we don't have
+Subject: [PATCH 02/45] .config: remove debian keys we don't have
 
 ---
  .config | 4 ++--

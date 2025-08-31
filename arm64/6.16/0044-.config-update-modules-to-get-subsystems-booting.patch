@@ -1,7 +1,7 @@
 From 9494948248a8851031543dddc2632afd3634275e Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Wed, 27 Aug 2025 06:08:35 -0400
-Subject: [PATCH 44/44] .config: update modules to get subsystems booting
+Subject: [PATCH 44/45] .config: update modules to get subsystems booting
 
 Note: the final problem I encountered was that anaconda
 blacklisted qcom_q6v6_pas.ko in /etc/modprobe.d.  This
