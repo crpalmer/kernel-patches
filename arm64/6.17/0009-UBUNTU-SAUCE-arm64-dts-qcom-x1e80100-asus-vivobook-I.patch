@@ -1,8 +1,8 @@
-From 01170857efb133e64656555de7d34cb5d03bf74b Mon Sep 17 00:00:00 2001
+From 90356d4fee40744ba141acda934695d924e5eaad Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Sat, 8 Mar 2025 11:02:25 +0100
-Subject: [PATCH 09/32] UBUNTU: SAUCE: arm64: dts: qcom:
- x1e80100-asus-vivobook: Introduce retimers, external DP
+Subject: UBUNTU: SAUCE: arm64: dts: qcom: x1e80100-asus-vivobook: Introduce
+ retimers, external DP
 
 BugLink: https://bugs.launchpad.net/bugs/2100858
 
@@ -420,5 +420,5 @@ index 71b2cc6c392f..f2fb6dfe8c2d 100644
  
  &usb_2 {
 -- 
-2.48.1
+2.51.0
 

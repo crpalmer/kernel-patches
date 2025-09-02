@@ -1,7 +1,7 @@
-From 0029f166739ed1aad6a0afdbefe84194890a1f8e Mon Sep 17 00:00:00 2001
+From e4e449a7e43cd1af9caea41f2c4ebb86e8737e02 Mon Sep 17 00:00:00 2001
 From: Stephan Gerhold <stephan.gerhold@linaro.org>
 Date: Mon, 7 Oct 2024 20:37:16 +0200
-Subject: [PATCH 11/32] wip: arm64: dts: qcom: x1e80100-crd: Add WiFi/BT pwrseq
+Subject: wip: arm64: dts: qcom: x1e80100-crd: Add WiFi/BT pwrseq
 
 Add the WiFi/BT nodes for CRD and describe the regulators for the WCN7850
 combo chip using the new power sequencing bindings.
@@ -221,5 +221,5 @@ index c9f0d5052670..db87b9b5be63 100644
  	compatible = "qcom,geni-debug-uart";
  	status = "okay";
 -- 
-2.48.1
+2.51.0
 

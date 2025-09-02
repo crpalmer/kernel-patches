@@ -1,0 +1,62 @@
+From 935cc0bd545627e5d5bfc38a6a84c4db260da738 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Tue, 2 Sep 2025 16:19:14 -0400
+Subject: Revert "soc: qcom: mdt_loader: Rename mdt_phdr_valid()"
+
+This reverts commit cd840362b0a7b3da59740c1380b18ce0ccf8c264.
+---
+ drivers/soc/qcom/mdt_loader.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/drivers/soc/qcom/mdt_loader.c b/drivers/soc/qcom/mdt_loader.c
+index 1b4ebae458f3..a836f10a6375 100644
+--- a/drivers/soc/qcom/mdt_loader.c
++++ b/drivers/soc/qcom/mdt_loader.c
+@@ -49,7 +49,7 @@ static bool mdt_header_valid(const struct firmware *fw)
+ 	return true;
+ }
+ 
+-static bool mdt_phdr_loadable(const struct elf32_phdr *phdr)
++static bool mdt_phdr_valid(const struct elf32_phdr *phdr)
+ {
+ 	if (phdr->p_type != PT_LOAD)
+ 		return false;
+@@ -122,7 +122,7 @@ ssize_t qcom_mdt_get_size(const struct firmware *fw)
+ 	for (i = 0; i < ehdr->e_phnum; i++) {
+ 		phdr = &phdrs[i];
+ 
+-		if (!mdt_phdr_loadable(phdr))
++		if (!mdt_phdr_valid(phdr))
+ 			continue;
+ 
+ 		if (phdr->p_paddr < min_addr)
+@@ -260,7 +260,7 @@ int qcom_mdt_pas_init(struct device *dev, const struct firmware *fw,
+ 	for (i = 0; i < ehdr->e_phnum; i++) {
+ 		phdr = &phdrs[i];
+ 
+-		if (!mdt_phdr_loadable(phdr))
++		if (!mdt_phdr_valid(phdr))
+ 			continue;
+ 
+ 		if (phdr->p_flags & QCOM_MDT_RELOCATABLE)
+@@ -360,7 +360,7 @@ static int __qcom_mdt_load(struct device *dev, const struct firmware *fw,
+ 	for (i = 0; i < ehdr->e_phnum; i++) {
+ 		phdr = &phdrs[i];
+ 
+-		if (!mdt_phdr_loadable(phdr))
++		if (!mdt_phdr_valid(phdr))
+ 			continue;
+ 
+ 		if (phdr->p_flags & QCOM_MDT_RELOCATABLE)
+@@ -387,7 +387,7 @@ static int __qcom_mdt_load(struct device *dev, const struct firmware *fw,
+ 	for (i = 0; i < ehdr->e_phnum; i++) {
+ 		phdr = &phdrs[i];
+ 
+-		if (!mdt_phdr_loadable(phdr))
++		if (!mdt_phdr_valid(phdr))
+ 			continue;
+ 
+ 		offset = phdr->p_paddr - mem_reloc;
+-- 
+2.51.0
+

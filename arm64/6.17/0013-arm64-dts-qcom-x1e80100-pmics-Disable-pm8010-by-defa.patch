@@ -1,8 +1,7 @@
-From 49e9179a8f21c3dd105895b43e3fc271b26b5f0e Mon Sep 17 00:00:00 2001
+From 325573c42fe5acf9bea691d607fc31364d3eebf0 Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Tue, 1 Jul 2025 20:35:53 +0200
-Subject: [PATCH 13/32] arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by
- default
+Subject: arm64: dts: qcom: x1e80100-pmics: Disable pm8010 by default
 
 pm8010 is a camera specific PMIC, and may not be present on some
 devices. These may instead use a dedicated vreg for this purpose (Dell
@@ -38,5 +37,5 @@ index e3888bc143a0..621890ada153 100644
  			compatible = "qcom,spmi-temp-alarm";
  			reg = <0x2400>;
 -- 
-2.48.1
+2.51.0
 

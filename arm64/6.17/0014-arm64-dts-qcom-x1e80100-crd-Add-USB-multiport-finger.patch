@@ -1,8 +1,7 @@
-From 6228560d307085e3c43a7ade3cea68c530b04971 Mon Sep 17 00:00:00 2001
+From 5b9986b5d544a84b648c0543c881adcfa140b236 Mon Sep 17 00:00:00 2001
 From: Stephan Gerhold <stephan.gerhold@linaro.org>
 Date: Mon, 14 Jul 2025 13:48:15 +0200
-Subject: [PATCH 14/32] arm64: dts: qcom: x1e80100-crd: Add USB multiport
- fingerprint reader
+Subject: arm64: dts: qcom: x1e80100-crd: Add USB multiport fingerprint reader
 
 The X1E80100 CRD has a Goodix fingerprint reader connected to the USB
 multiport controller on eUSB6. All other ports (including USB super-speed
@@ -105,5 +104,5 @@ index db87b9b5be63..dc608e82a4ec 100644
 +	status = "okay";
 +};
 -- 
-2.48.1
+2.51.0
 

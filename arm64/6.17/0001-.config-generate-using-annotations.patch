@@ -1,7 +1,7 @@
-From 872b088cb1e329551437b84b5d7413a6a3fae1f8 Mon Sep 17 00:00:00 2001
+From 76abe4d4c57a2d5eedb2d831efc77885a13841a8 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Mon, 18 Aug 2025 14:45:38 -0400
-Subject: [PATCH 01/32] .config: generate using annotations
+Subject: .config: generate using annotations
 
 ./debian/scripts/misc/annotations --arch arm64 --export > .config
 ---
@@ -15127,5 +15127,5 @@ index 000000000000..34933ab84f84
 +
 +CONFIG_IO_URING_ZCRX=y
 -- 
-2.48.1
+2.51.0
 

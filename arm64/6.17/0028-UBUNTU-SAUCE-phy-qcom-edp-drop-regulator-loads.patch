@@ -1,7 +1,7 @@
-From 8af3c29744a5133574800f8b05de5ab05098f970 Mon Sep 17 00:00:00 2001
+From 7e5144ca504de39ec6513c8bde58e4cd1b3e9036 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Thu, 21 Jul 2022 11:27:08 +0200
-Subject: [PATCH 28/32] UBUNTU: SAUCE: phy: qcom-edp: drop regulator loads
+Subject: UBUNTU: SAUCE: phy: qcom-edp: drop regulator loads
 
 BugLink: https://bugs.launchpad.net/bugs/2078929
 
@@ -44,5 +44,5 @@ index f1b51018683d..3f63d76a3130 100644
  	if (ret)
  		return ret;
 -- 
-2.48.1
+2.51.0
 

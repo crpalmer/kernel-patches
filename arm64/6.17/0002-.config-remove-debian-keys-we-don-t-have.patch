@@ -1,7 +1,7 @@
-From f08ed8d2b4bf2c6851efe09d00643135922ccbb6 Mon Sep 17 00:00:00 2001
+From 0e65d46632a1308b3a3a6b69afdfd27687a3cdd1 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Mon, 18 Aug 2025 14:46:18 -0400
-Subject: [PATCH 02/32] .config: remove debian keys we don't have
+Subject: .config: remove debian keys we don't have
 
 ---
  .config | 4 ++--
@@ -30,5 +30,5 @@ index 34933ab84f84..e921f2888e68 100644
  # end of Certificates for signature checking
  
 -- 
-2.48.1
+2.51.0
 

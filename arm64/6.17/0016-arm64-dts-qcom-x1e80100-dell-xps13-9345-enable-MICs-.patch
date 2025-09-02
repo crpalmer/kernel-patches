@@ -1,8 +1,7 @@
-From eaf3272bf694215adea501998562d4c92ccd8919 Mon Sep 17 00:00:00 2001
+From ff4d99302a5a14ada8ad3db0950325bd34ebde5e Mon Sep 17 00:00:00 2001
 From: Aleksandrs Vinarskis <alex.vinarskis@gmail.com>
 Date: Thu, 10 Apr 2025 21:29:14 +0200
-Subject: [PATCH 16/32] arm64: dts: qcom: x1e80100-dell-xps13-9345: enable MICs
- LDO
+Subject: arm64: dts: qcom: x1e80100-dell-xps13-9345: enable MICs LDO
 
 Particular device comes without headset combo jack, hence does not
 feature wcd codec IC. In such cases, DMICs are powered from vreg_l1b.
@@ -30,5 +29,5 @@ index 988298894bf9..9f538ee821d1 100644
  		wsa-dai-link {
  			link-name = "WSA Playback";
 -- 
-2.48.1
+2.51.0
 

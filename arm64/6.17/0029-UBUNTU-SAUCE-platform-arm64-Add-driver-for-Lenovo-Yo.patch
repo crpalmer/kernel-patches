@@ -1,8 +1,8 @@
-From 202ee5b1529a040edcfdf8b6a6d7b06c6cf877e7 Mon Sep 17 00:00:00 2001
+From 4546b605e5ce7c1d96fbaee1a644435000962508 Mon Sep 17 00:00:00 2001
 From: Maya Matuszczyk <maccraft123mc@gmail.com>
 Date: Fri, 27 Sep 2024 20:53:41 +0200
-Subject: [PATCH 29/32] UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo
- Yoga Slim 7x's EC
+Subject: UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo Yoga Slim 7x's
+ EC
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -29,10 +29,10 @@ Signed-off-by: Paolo Pisati <paolo.pisati@canonical.com>
  create mode 100644 drivers/platform/arm64/lenovo-yoga-slim7x.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index daf520a13bdf..b799a38dd749 100644
+index 6dcfbd11efef..139fec4255a5 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -13876,6 +13876,15 @@ L:	platform-driver-x86@vger.kernel.org
+@@ -13887,6 +13887,15 @@ L:	platform-driver-x86@vger.kernel.org
  S:	Maintained
  F:	drivers/platform/x86/lenovo/wmi-hotkey-utilities.c
  
@@ -287,5 +287,5 @@ index 000000000000..8f6d523395bc
 +MODULE_DESCRIPTION("Lenovo Yoga Slim 7x Embedded Controller");
 +MODULE_LICENSE("GPL");
 -- 
-2.48.1
+2.51.0
 

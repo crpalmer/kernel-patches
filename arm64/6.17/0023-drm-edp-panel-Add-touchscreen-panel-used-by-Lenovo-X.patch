@@ -1,8 +1,7 @@
-From 0a2ad5b453d578f3c2a3720bbc7e71633ed5ed73 Mon Sep 17 00:00:00 2001
+From 26505867ea25ac859813cd5aa05fe96b215e0dd6 Mon Sep 17 00:00:00 2001
 From: Daniel Thompson <daniel@riscstar.com>
 Date: Tue, 1 Jul 2025 09:16:30 +0100
-Subject: [PATCH 23/32] drm/edp-panel: Add touchscreen panel used by Lenovo
- X13s
+Subject: drm/edp-panel: Add touchscreen panel used by Lenovo X13s
 
 After (checks watch) a little over two years I finally investigated the
 boot warning on my Thinkpad X13s and it was caused by the conservative
@@ -43,5 +42,5 @@ index 9a56e208cbdd..a0526a025688 100644
  	EDP_PANEL_ENTRY('B', 'O', 'E', 0x0b09, &delay_200_500_e50_po2e200, "NV140FHM-NZ"),
  	EDP_PANEL_ENTRY('B', 'O', 'E', 0x0b1e, &delay_200_500_e80, "NE140QDM-N6A"),
 -- 
-2.48.1
+2.51.0
 
