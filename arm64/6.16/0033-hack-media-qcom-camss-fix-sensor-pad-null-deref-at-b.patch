@@ -1,7 +1,7 @@
-From 8d5d9020bf2a0b25e3d219b6ca50c01d087bebcd Mon Sep 17 00:00:00 2001
+From 94c669aea1a842278a5be70601062b4de1888f99 Mon Sep 17 00:00:00 2001
 From: Johan Hovold <johan+linaro@kernel.org>
 Date: Mon, 7 Apr 2025 15:51:47 +0200
-Subject: [PATCH 33/45] hack: media: qcom: camss: fix sensor pad null-deref at
+Subject: [PATCH 33/47] hack: media: qcom: camss: fix sensor pad null-deref at
  boot
 
 Due to an unresolved bug in camss (or v4l2), user space can access the
@@ -40,7 +40,7 @@ Signed-off-by: Johan Hovold <johan+linaro@kernel.org>
  1 file changed, 8 insertions(+)
 
 diff --git a/drivers/media/platform/qcom/camss/camss.c b/drivers/media/platform/qcom/camss/camss.c
-index 06f42875702f..c664510d2b2a 100644
+index 1507c79913bd..063b1e7af17f 100644
 --- a/drivers/media/platform/qcom/camss/camss.c
 +++ b/drivers/media/platform/qcom/camss/camss.c
 @@ -2845,6 +2845,14 @@ struct media_pad *camss_find_sensor_pad(struct media_entity *entity)

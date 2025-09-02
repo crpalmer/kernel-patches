@@ -1,7 +1,7 @@
-From 9ad0aa3a96878f164b9b2ef663700b02514abebc Mon Sep 17 00:00:00 2001
+From 8ad163d43c77b40482cbd2b781b23f65016c22d7 Mon Sep 17 00:00:00 2001
 From: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
 Date: Tue, 15 Jul 2025 21:26:59 -0300
-Subject: [PATCH 25/45] arm64: dts: qcom: Add support for Dell Inspiron 7441 /
+Subject: [PATCH 25/47] arm64: dts: qcom: Add support for Dell Inspiron 7441 /
  Latitude 7455
 
 Add device trees for both SKUs of the X1E80100 Thena laptop:

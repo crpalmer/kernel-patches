@@ -1,7 +1,7 @@
-From fb2184d19169589b7c5cf74be7649fbada65d3b6 Mon Sep 17 00:00:00 2001
+From 1aabd622f46ee9952e7ee135d87d94afe5ee861c Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Sat, 30 Aug 2025 15:48:35 -0400
-Subject: [PATCH 45/45] .config: Get closer to the ubuntu modules
+Subject: [PATCH 45/47] .config: Get closer to the ubuntu modules
 
 ---
  .config | 30 +++++++++++++++---------------

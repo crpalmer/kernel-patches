@@ -1,7 +1,7 @@
-From 850ad21e0b741bd04c7c3d53e06d831c3dd75647 Mon Sep 17 00:00:00 2001
+From 8e2d52fea3f6049069a5859bd1036be16c5f6f3e Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Mon, 18 Aug 2025 14:45:38 -0400
-Subject: [PATCH 01/45] .config: generate using annotations
+Subject: [PATCH 01/47] .config: generate using annotations
 
 ./debian/scripts/misc/annotations --arch arm64 --export > .config
 ---

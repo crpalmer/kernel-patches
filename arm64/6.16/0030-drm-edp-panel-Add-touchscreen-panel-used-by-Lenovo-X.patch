@@ -1,7 +1,7 @@
-From a9662c0d116f5c879a544e2aafa61e1f6db44020 Mon Sep 17 00:00:00 2001
+From f1a995d4dbcc0f91629f6ea0e78deab266623074 Mon Sep 17 00:00:00 2001
 From: Daniel Thompson <daniel@riscstar.com>
 Date: Tue, 1 Jul 2025 09:16:30 +0100
-Subject: [PATCH 30/45] drm/edp-panel: Add touchscreen panel used by Lenovo
+Subject: [PATCH 30/47] drm/edp-panel: Add touchscreen panel used by Lenovo
  X13s
 
 After (checks watch) a little over two years I finally investigated the

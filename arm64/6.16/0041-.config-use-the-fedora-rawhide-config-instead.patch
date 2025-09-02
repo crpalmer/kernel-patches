@@ -1,7 +1,7 @@
-From 8b9634fe13a715f46ab95fb8fa3ec4b92c102c4a Mon Sep 17 00:00:00 2001
+From 32dff9d648c2ab7f0ab45ba06150a75a9539ea2b Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Wed, 20 Aug 2025 19:17:19 -0400
-Subject: [PATCH 41/45] .config: use the fedora rawhide config instead
+Subject: [PATCH 41/47] .config: use the fedora rawhide config instead
 
 ---
  .config | 7102 +++++++++++++++++++++----------------------------------

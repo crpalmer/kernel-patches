@@ -1,7 +1,7 @@
-From 54caee351dcaa2a67761a7b915a24459c4b845f9 Mon Sep 17 00:00:00 2001
+From af8ece3a8d6027c096ef0add895f68230534c043 Mon Sep 17 00:00:00 2001
 From: Maya Matuszczyk <maccraft123mc@gmail.com>
 Date: Fri, 27 Sep 2024 20:53:41 +0200
-Subject: [PATCH 38/45] UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo
+Subject: [PATCH 38/47] UBUNTU: SAUCE: platform: arm64: Add driver for Lenovo
  Yoga Slim 7x's EC
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

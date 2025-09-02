@@ -1,7 +1,7 @@
-From 5a884a0eb9a9c58a2ce34ac902a4d3b7b8825556 Mon Sep 17 00:00:00 2001
+From 585f7cdd583efd581091049bb643903308a0cb08 Mon Sep 17 00:00:00 2001
 From: Konrad Dybcio <konrad.dybcio@linaro.org>
 Date: Tue, 25 Apr 2023 14:00:59 +0000
-Subject: [PATCH 06/45] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp-x13s: Enable
+Subject: [PATCH 06/47] UBUNTU: SAUCE: arm64: dts: qcom: sc8280xp-x13s: Enable
  Venus
 
 BugLink: https://bugs.launchpad.net/bugs/2078929

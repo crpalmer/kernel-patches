@@ -1,7 +1,7 @@
-From 7029ecfe06664d9fec42a8c170fe4c7a521f11c1 Mon Sep 17 00:00:00 2001
+From 611af5dc075896afe15a81b5fd3e74a1db5ff2d8 Mon Sep 17 00:00:00 2001
 From: Maya Matuszczyk <maccraft123mc@gmail.com>
 Date: Fri, 27 Sep 2024 20:53:42 +0200
-Subject: [PATCH 43/45] UBUNTU: SAUCE: arm64: dts: qcom: Add EC to Lenovo Yoga
+Subject: [PATCH 43/47] UBUNTU: SAUCE: arm64: dts: qcom: Add EC to Lenovo Yoga
  Slim 7x
 
 BugLink: https://bugs.launchpad.net/bugs/2100858

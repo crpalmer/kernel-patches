@@ -1,7 +1,7 @@
-From cfcbbc8636d9c23d70d24ab6821d68e04fd61899 Mon Sep 17 00:00:00 2001
+From e906b96fa2d1180846cbdb0436762fe264ab683a Mon Sep 17 00:00:00 2001
 From: Bjorn Andersson <bjorn.andersson@oss.qualcomm.com>
 Date: Tue, 18 Mar 2025 22:22:57 -0500
-Subject: [PATCH 22/45] arm64: dts: qcom: x1e80100-dell-xps13-9345: Enable
+Subject: [PATCH 22/47] arm64: dts: qcom: x1e80100-dell-xps13-9345: Enable
  fingerprint sensor
 
 The fingerprint sensor, hidden in the power button, is connected to one
