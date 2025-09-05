@@ -1,4 +1,4 @@
-From 11d19eac0aa989e83d7897debf5273888ea5e145 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 2 Sep 2025 16:19:14 -0400
 Subject: Revert "soc: qcom: mdt_loader: Rename mdt_phdr_valid()"

@@ -1,4 +1,4 @@
-From 0397184e099ac5dd16df5c0ecee87f31bd4cd49a Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 2 Sep 2025 16:19:18 -0400
 Subject: Revert "soc: qcom: mdt_loader: Ensure we don't read past the ELF

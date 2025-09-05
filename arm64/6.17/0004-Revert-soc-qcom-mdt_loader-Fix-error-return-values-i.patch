@@ -1,4 +1,4 @@
-From b005a8d86cc27749e1cde87775d605c9f613951d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: "Christopher R. Palmer" <crpalmer@gmail.com>
 Date: Tue, 2 Sep 2025 15:46:00 -0400
 Subject: Revert "soc: qcom: mdt_loader: Fix error return values in
