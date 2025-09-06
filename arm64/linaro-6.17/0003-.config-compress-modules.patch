@@ -1,0 +1,25 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Fri, 5 Sep 2025 08:15:09 -0400
+Subject: .config: compress modules
+
+---
+ .config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index 86c1a92e20d2..8eb9d668122e 100644
+--- a/.config
++++ b/.config
+@@ -992,7 +992,7 @@ CONFIG_MODULE_COMPRESS=y
+ # CONFIG_MODULE_COMPRESS_GZIP is not set
+ CONFIG_MODULE_COMPRESS_XZ=y
+ # CONFIG_MODULE_COMPRESS_ZSTD is not set
+-# CONFIG_MODULE_COMPRESS_ALL is not set
++CONFIG_MODULE_COMPRESS_ALL=y
+ CONFIG_MODULE_DECOMPRESS=y
+ # CONFIG_MODULE_ALLOW_MISSING_NAMESPACE_IMPORTS is not set
+ CONFIG_MODPROBE_PATH="/usr/sbin/modprobe"
+-- 
+2.51.0
+
