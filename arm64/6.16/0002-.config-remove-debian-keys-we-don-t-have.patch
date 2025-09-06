@@ -1,0 +1,34 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Mon, 18 Aug 2025 14:46:18 -0400
+Subject: .config: remove debian keys we don't have
+
+---
+ .config | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/.config b/.config
+index 34933ab84f84..e921f2888e68 100644
+--- a/.config
++++ b/.config
+@@ -14441,7 +14441,7 @@ CONFIG_MODULE_SIG_KEY="certs/signing_key.pem"
+ CONFIG_MODULE_SIG_KEY_TYPE_RSA=y
+ # CONFIG_MODULE_SIG_KEY_TYPE_ECDSA is not set
+ CONFIG_SYSTEM_TRUSTED_KEYRING=y
+-CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
++CONFIG_SYSTEM_TRUSTED_KEYS=""
+ CONFIG_SYSTEM_EXTRA_CERTIFICATE=y
+ CONFIG_SYSTEM_EXTRA_CERTIFICATE_SIZE=4096
+ CONFIG_SECONDARY_TRUSTED_KEYRING=y
+@@ -14449,7 +14449,7 @@ CONFIG_SECONDARY_TRUSTED_KEYRING=y
+ CONFIG_SYSTEM_BLACKLIST_KEYRING=y
+ CONFIG_SYSTEM_BLACKLIST_HASH_LIST=""
+ CONFIG_SYSTEM_REVOCATION_LIST=y
+-CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
++CONFIG_SYSTEM_REVOCATION_KEYS=""
+ # CONFIG_SYSTEM_BLACKLIST_AUTH_UPDATE is not set
+ # end of Certificates for signature checking
+ 
+-- 
+2.51.0
+
