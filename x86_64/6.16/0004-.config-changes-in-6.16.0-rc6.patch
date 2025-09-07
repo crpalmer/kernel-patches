@@ -1,0 +1,40 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Fri, 18 Jul 2025 13:52:18 -0400
+Subject: .config changes in 6.16.0-rc6
+
+---
+ .config | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/.config b/.config
+index 18243bac8289..2c924a7ec00f 100644
+--- a/.config
++++ b/.config
+@@ -1,6 +1,6 @@
+ #
+ # Automatically generated file; DO NOT EDIT.
+-# Linux/x86 6.16.0-pre Kernel Configuration
++# Linux/x86 6.16.0-rc6 Kernel Configuration
+ #
+ CONFIG_CC_VERSION_TEXT="gcc (GCC) 15.1.1 20250521 (Red Hat 15.1.1-2)"
+ CONFIG_CC_IS_GCC=y
+@@ -286,7 +286,6 @@ CONFIG_PCSPKR_PLATFORM=y
+ # CONFIG_BASE_SMALL is not set
+ CONFIG_FUTEX=y
+ CONFIG_FUTEX_PI=y
+-CONFIG_FUTEX_PRIVATE_HASH=y
+ CONFIG_FUTEX_MPOL=y
+ CONFIG_EPOLL=y
+ CONFIG_SIGNALFD=y
+@@ -596,6 +595,7 @@ CONFIG_MITIGATION_SPECTRE_V2=y
+ CONFIG_MITIGATION_SRBDS=y
+ CONFIG_MITIGATION_SSB=y
+ CONFIG_MITIGATION_ITS=y
++CONFIG_MITIGATION_TSA=y
+ CONFIG_ARCH_HAS_ADD_PAGES=y
+ 
+ #
+-- 
+2.51.0
+
