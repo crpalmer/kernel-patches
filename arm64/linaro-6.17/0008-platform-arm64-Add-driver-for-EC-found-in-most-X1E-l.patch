@@ -24,10 +24,10 @@ Signed-off-by: Maya Matuszczyk <maccraft123mc@gmail.com>
  create mode 100644 drivers/platform/arm64/qcom-x1e-it8987.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 294011e31257..a028ecc4b49b 100644
+index 71fd69b85db1..2fbe25c43303 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -20486,6 +20486,12 @@ L:	netdev@vger.kernel.org
+@@ -20488,6 +20488,12 @@ L:	netdev@vger.kernel.org
  S:	Maintained
  F:	drivers/net/ipa/
  

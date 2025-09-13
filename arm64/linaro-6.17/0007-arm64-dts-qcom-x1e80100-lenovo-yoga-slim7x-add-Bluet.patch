@@ -18,7 +18,7 @@ Signed-off-by: Bjorn Andersson <andersson@kernel.org>
  1 file changed, 143 insertions(+)
 
 diff --git a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
-index 6176e7e7299b..098fec189e7f 100644
+index e76202fa76bc..8901d3354d45 100644
 --- a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
 +++ b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
 @@ -19,6 +19,7 @@ / {
@@ -137,7 +137,7 @@ index 6176e7e7299b..098fec189e7f 100644
  };
  
  &apps_rsc {
-@@ -1159,6 +1261,16 @@ &pcie4_port0 {
+@@ -1162,6 +1264,16 @@ &pcie4_port0 {
  	wifi@0 {
  		compatible = "pci17cb,1107";
  		reg = <0x10000 0x0 0x0 0x0 0x0>;
@@ -154,7 +154,7 @@ index 6176e7e7299b..098fec189e7f 100644
  	};
  };
  
-@@ -1533,6 +1645,37 @@ usb2_pwr_3p3_reg_en: usb2-pwr-3p3-reg-en-state {
+@@ -1542,6 +1654,37 @@ usb2_pwr_3p3_reg_en: usb2-pwr-3p3-reg-en-state {
  		drive-strength = <2>;
  		bias-disable;
  	};
