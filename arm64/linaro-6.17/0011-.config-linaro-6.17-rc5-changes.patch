@@ -1,0 +1,43 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Fri, 12 Sep 2025 20:36:42 -0400
+Subject: .config: linaro 6.17-rc5 changes
+
+---
+ .config | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/.config b/.config
+index 887f02bb9a8a..38ef8a286df3 100644
+--- a/.config
++++ b/.config
+@@ -1,6 +1,6 @@
+ #
+ # Automatically generated file; DO NOT EDIT.
+-# Linux/arm64 6.17.0-rc4 Kernel Configuration
++# Linux/arm64 6.17.0-rc5 Kernel Configuration
+ #
+ CONFIG_CC_VERSION_TEXT="gcc (GCC) 15.2.1 20250808 (Red Hat 15.2.1-1)"
+ CONFIG_CC_IS_GCC=y
+@@ -3294,6 +3294,8 @@ CONFIG_DNET=m
+ # CONFIG_NET_VENDOR_DEC is not set
+ CONFIG_NET_VENDOR_DLINK=y
+ CONFIG_DL2K=m
++CONFIG_SUNDANCE=m
++# CONFIG_SUNDANCE_MMIO is not set
+ CONFIG_NET_VENDOR_EMULEX=y
+ CONFIG_BE2NET=m
+ # CONFIG_BE2NET_HWMON is not set
+@@ -4909,8 +4911,8 @@ CONFIG_PINCTRL_SM8550_LPASS_LPI=m
+ #
+ # end of Renesas pinctrl drivers
+ 
+-CONFIG_GPIOLIB=y
+ CONFIG_GPIOLIB_LEGACY=y
++CONFIG_GPIOLIB=y
+ CONFIG_GPIOLIB_FASTPATH_LIMIT=512
+ CONFIG_OF_GPIO=y
+ CONFIG_GPIO_ACPI=y
+-- 
+2.51.0
+
