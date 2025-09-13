@@ -1,0 +1,26 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Tue, 9 Sep 2025 08:50:40 -0400
+Subject: qcom-cpufreq-hw: Built in instead of module
+
+This is to match the arm64/defconfig
+---
+ .config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index 3251d1ed20e3..887f02bb9a8a 100644
+--- a/.config
++++ b/.config
+@@ -710,7 +710,7 @@ CONFIG_CPUFREQ_VIRT=m
+ CONFIG_CPUFREQ_DT_PLATDEV=y
+ CONFIG_ARM_SCPI_CPUFREQ=m
+ CONFIG_ARM_QCOM_CPUFREQ_NVMEM=m
+-CONFIG_ARM_QCOM_CPUFREQ_HW=m
++CONFIG_ARM_QCOM_CPUFREQ_HW=y
+ CONFIG_ARM_SCMI_CPUFREQ=m
+ CONFIG_ACPI_CPPC_CPUFREQ=m
+ # CONFIG_ACPI_CPPC_CPUFREQ_FIE is not set
+-- 
+2.51.0
+
