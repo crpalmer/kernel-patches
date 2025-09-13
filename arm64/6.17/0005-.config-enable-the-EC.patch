@@ -1,0 +1,24 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Sat, 6 Sep 2025 15:16:55 -0400
+Subject: .config: enable the EC
+
+---
+ .config | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/.config b/.config
+index 8eb9d668122e..806e20d089ec 100644
+--- a/.config
++++ b/.config
+@@ -10136,6 +10136,7 @@ CONFIG_ARM64_PLATFORM_DEVICES=y
+ CONFIG_EC_ACER_ASPIRE1=m
+ # CONFIG_EC_HUAWEI_GAOKUN is not set
+ CONFIG_EC_LENOVO_YOGA_C630=m
++CONFIG_EC_QCOM_X1E_IT8987=y
+ CONFIG_HAVE_CLK=y
+ CONFIG_HAVE_CLK_PREPARE=y
+ CONFIG_COMMON_CLK=y
+-- 
+2.51.0
+

@@ -1,0 +1,26 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Mon, 8 Sep 2025 20:58:05 -0400
+Subject: qcom-cpufreq-hw: Build it into the kernel
+
+This is what the defconfig does.
+---
+ .config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.config b/.config
+index dfba5c588fb0..5ac8aa01b830 100644
+--- a/.config
++++ b/.config
+@@ -725,7 +725,7 @@ CONFIG_ARM_SCPI_CPUFREQ=m
+ # CONFIG_ARM_IMX6Q_CPUFREQ is not set
+ CONFIG_ARM_IMX_CPUFREQ_DT=m
+ CONFIG_ARM_QCOM_CPUFREQ_NVMEM=m
+-CONFIG_ARM_QCOM_CPUFREQ_HW=m
++CONFIG_ARM_QCOM_CPUFREQ_HW=y
+ CONFIG_ARM_RASPBERRYPI_CPUFREQ=m
+ CONFIG_ARM_SCMI_CPUFREQ=m
+ # CONFIG_ARM_TEGRA20_CPUFREQ is not set
+-- 
+2.51.0
+
