@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Mon, 15 Sep 2025 10:12:40 -0400
+Subject: defconfig: Enable the X1E IT8987 EC driver
+
+---
+ configs/enable-x1e-ec.config | 1 +
+ gen-config.sh                | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 configs/enable-x1e-ec.config
+
+diff --git a/configs/enable-x1e-ec.config b/configs/enable-x1e-ec.config
+new file mode 100644
+index 000000000000..d117032a65a2
+--- /dev/null
++++ b/configs/enable-x1e-ec.config
+@@ -0,0 +1 @@
++CONFIG_EC_QCOM_X1E_IT8987=y
+diff --git a/gen-config.sh b/gen-config.sh
+index 5512806ed708..7d15949f550f 100755
+--- a/gen-config.sh
++++ b/gen-config.sh
+@@ -7,6 +7,7 @@ tuxmake \
+     --kconfig-add qcom_laptops.config \
+     --kconfig-add configs/fedora.config \
+     --kconfig-add configs/localversion.config \
++    --kconfig-add configs/enable-x1e-ec.config \
+     config
+ 
+ cp ~/.cache/tuxmake/builds/1/config .config
+-- 
+2.51.0
+
