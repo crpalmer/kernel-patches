@@ -1,0 +1,121 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Wed, 17 Sep 2025 06:14:42 -0400
+Subject: gen-config: Import qcom_laptops.config from linaro
+
+---
+ configs/qcom_laptops.config | 88 +++++++++++++++++++++++++++++++++++++
+ gen-config.sh               |  2 +-
+ 2 files changed, 89 insertions(+), 1 deletion(-)
+ create mode 100644 configs/qcom_laptops.config
+
+diff --git a/configs/qcom_laptops.config b/configs/qcom_laptops.config
+new file mode 100644
+index 000000000000..807d128411a3
+--- /dev/null
++++ b/configs/qcom_laptops.config
+@@ -0,0 +1,88 @@
++# Disable other archs to speed up builds and reduce size of kernel
++# CONFIG_ARCH_ACTIONS is not set
++# CONFIG_ARCH_AIROHA is not set
++# CONFIG_ARCH_SUNXI is not set
++# CONFIG_ARCH_ALPINE is not set
++# CONFIG_ARCH_APPLE is not set
++# CONFIG_ARCH_AXIADO is not set
++# CONFIG_ARCH_BCM is not set
++# CONFIG_ARCH_BERLIN is not set
++# CONFIG_ARCH_BLAIZE is not set
++# CONFIG_ARCH_CIX is not set
++# CONFIG_ARCH_EXYNOS is not set
++# CONFIG_ARCH_SPARX5 is not set
++# CONFIG_ARCH_K3 is not set
++# CONFIG_ARCH_LG1K is not set
++# CONFIG_ARCH_HISI is not set
++# CONFIG_ARCH_KEEMBAY is not set
++# CONFIG_ARCH_MEDIATEK is not set
++# CONFIG_ARCH_MESON is not set
++# CONFIG_ARCH_MVEBU is not set
++# CONFIG_ARCH_NXP is not set
++# CONFIG_ARCH_LAYERSCAPE is not set
++# CONFIG_ARCH_MXC is not set
++# CONFIG_ARCH_S32 is not set
++# CONFIG_ARCH_MA35 is not set
++# CONFIG_ARCH_NPCM is not set
++# CONFIG_ARCH_REALTEK is not set
++# CONFIG_ARCH_RENESAS is not set
++# CONFIG_ARCH_ROCKCHIP is not set
++# CONFIG_ARCH_SEATTLE is not set
++# CONFIG_ARCH_INTEL_SOCFPGA is not set
++# CONFIG_ARCH_SOPHGO is not set
++# CONFIG_ARCH_STM32 is not set
++# CONFIG_ARCH_SYNQUACER is not set
++# CONFIG_ARCH_TEGRA is not set
++# CONFIG_ARCH_TESLA_FSD is not set
++# CONFIG_ARCH_SPRD is not set
++# CONFIG_ARCH_THUNDER is not set
++# CONFIG_ARCH_THUNDER2 is not set
++# CONFIG_ARCH_UNIPHIER is not set
++# CONFIG_ARCH_VEXPRESS is not set
++# CONFIG_ARCH_VISCONTI is not set
++# CONFIG_ARCH_XGENE is not set
++# CONFIG_ARCH_ZYNQMP is not set
++
++# Disable bigger drivers for non-existing hardware (e.g. other SoCs)
++# CONFIG_DRM_NOUVEAU is not set
++# CONFIG_DRM_ETNAVIV is not set
++# CONFIG_DRM_HISI_HIBMC is not set
++# CONFIG_DRM_HISI_KIRIN is not set
++# CONFIG_DRM_LIMA is not set
++# CONFIG_DRM_PANFROST is not set
++# CONFIG_DRM_PANTHOR is not set
++# CONFIG_DRM_TIDSS is not set
++# CONFIG_DRM_POWERVR is not set
++
++# Full disk encryption
++CONFIG_DM_CRYPT=m
++
++# libcamera softisp
++CONFIG_DMABUF_HEAPS_CMA=y
++
++# For Ubuntu/snap
++CONFIG_SQUASHFS_LZ4=y
++CONFIG_SQUASHFS_LZO=y
++CONFIG_SQUASHFS_XZ=y
++
++# For network sharing, e.g. in Ubuntu connection sharing with test boards
++CONFIG_IP_ADVANCED_ROUTER=y
++CONFIG_NF_TABLES=m
++CONFIG_NF_TABLES_INET=y
++CONFIG_NFT_NAT=m
++CONFIG_NFT_MASQ=m
++CONFIG_NFT_CT=m
++CONFIG_NFT_REJECT=m
++CONFIG_NF_CONNTRACK=m
++
++# Network from mobile phone (so as a device)
++CONFIG_USB_NET_RNDIS_HOST=m
++
++# Typical use-cases for desktop/laptop
++CONFIG_NTFS_FS=m
++CONFIG_SND_USB_AUDIO=m
++CONFIG_SND_SOC_USB=m
++CONFIG_SND_USB_AUDIO_MIDI_V2=y
++CONFIG_FW_LOADER_COMPRESS=y
++CONFIG_FW_LOADER_COMPRESS_XZ=y
++CONFIG_FW_LOADER_COMPRESS_ZSTD=y
+diff --git a/gen-config.sh b/gen-config.sh
+index 5512806ed708..845b9d12c99a 100755
+--- a/gen-config.sh
++++ b/gen-config.sh
+@@ -4,7 +4,7 @@ rm -rf ~/.cache/tuxmake
+ make mrproper
+ tuxmake \
+     --kconfig     defconfig \
+-    --kconfig-add qcom_laptops.config \
++    --kconfig-add configs/qcom_laptops.config \
+     --kconfig-add configs/fedora.config \
+     --kconfig-add configs/localversion.config \
+     config
+-- 
+2.51.0
+
