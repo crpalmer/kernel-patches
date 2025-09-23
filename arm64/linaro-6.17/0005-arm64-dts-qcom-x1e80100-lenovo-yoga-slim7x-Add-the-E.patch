@@ -8,7 +8,7 @@ Subject: arm64: dts: qcom: x1e80100-lenovo-yoga-slim7x: Add the EC
  1 file changed, 22 insertions(+)
 
 diff --git a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
-index 8901d3354d45..c712b8d35a6b 100644
+index d7f0eccac49b..434a1909ff6b 100644
 --- a/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
 +++ b/arch/arm64/boot/dts/qcom/x1e80100-lenovo-yoga-slim7x.dts
 @@ -1123,6 +1123,22 @@ retimer_ss1_con_sbu_out: endpoint {
@@ -34,8 +34,8 @@ index 8901d3354d45..c712b8d35a6b 100644
  &i2c8 {
  	clock-frequency = <400000>;
  
-@@ -1490,6 +1506,12 @@ edp_hpd_default: edp-hpd-default-state {
- 		bias-disable;
+@@ -1484,6 +1500,12 @@ reset-n-pins {
+ 		};
  	};
  
 +	ec_int_n_default: ec-int-n-state {
