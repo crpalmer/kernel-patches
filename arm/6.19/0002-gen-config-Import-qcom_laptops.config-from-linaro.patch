@@ -4,16 +4,16 @@ Date: Wed, 17 Sep 2025 06:14:42 -0400
 Subject: gen-config: Import qcom_laptops.config from linaro
 
 ---
- configs/qcom_laptops.config | 88 +++++++++++++++++++++++++++++++++++++
- gen-config.sh               |  2 +-
+ arch/arm64/configs/qcom_laptops.config | 88 ++++++++++++++++++++++++++
+ gen-config.sh                          |  2 +-
  2 files changed, 89 insertions(+), 1 deletion(-)
- create mode 100644 configs/qcom_laptops.config
+ create mode 100644 arch/arm64/configs/qcom_laptops.config
 
-diff --git a/configs/qcom_laptops.config b/configs/qcom_laptops.config
+diff --git a/arch/arm64/configs/qcom_laptops.config b/arch/arm64/configs/qcom_laptops.config
 new file mode 100644
 index 000000000000..807d128411a3
 --- /dev/null
-+++ b/configs/qcom_laptops.config
++++ b/arch/arm64/configs/qcom_laptops.config
 @@ -0,0 +1,88 @@
 +# Disable other archs to speed up builds and reduce size of kernel
 +# CONFIG_ARCH_ACTIONS is not set
@@ -104,7 +104,7 @@ index 000000000000..807d128411a3
 +CONFIG_FW_LOADER_COMPRESS_XZ=y
 +CONFIG_FW_LOADER_COMPRESS_ZSTD=y
 diff --git a/gen-config.sh b/gen-config.sh
-index 5512806ed708..845b9d12c99a 100755
+index 5512806ed708..3d04af1b94ad 100755
 --- a/gen-config.sh
 +++ b/gen-config.sh
 @@ -4,7 +4,7 @@ rm -rf ~/.cache/tuxmake
@@ -112,7 +112,7 @@ index 5512806ed708..845b9d12c99a 100755
  tuxmake \
      --kconfig     defconfig \
 -    --kconfig-add qcom_laptops.config \
-+    --kconfig-add configs/qcom_laptops.config \
++    --kconfig-add arch/arm64/configs/qcom_laptops.config \
      --kconfig-add configs/fedora.config \
      --kconfig-add configs/localversion.config \
      config

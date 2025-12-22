@@ -17,11 +17,11 @@ index 000000000000..d117032a65a2
 @@ -0,0 +1 @@
 +CONFIG_EC_QCOM_X1E_IT8987=y
 diff --git a/gen-config.sh b/gen-config.sh
-index 845b9d12c99a..890c54ddd9b2 100755
+index 3d04af1b94ad..686edc35ab8f 100755
 --- a/gen-config.sh
 +++ b/gen-config.sh
 @@ -7,6 +7,7 @@ tuxmake \
-     --kconfig-add configs/qcom_laptops.config \
+     --kconfig-add arch/arm64/configs/qcom_laptops.config \
      --kconfig-add configs/fedora.config \
      --kconfig-add configs/localversion.config \
 +    --kconfig-add configs/enable-x1e-ec.config \
