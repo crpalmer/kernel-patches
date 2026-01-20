@@ -1,0 +1,206 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Tue, 16 Sep 2025 17:01:43 -0400
+Subject: ASoC: qcom: audioreach: Add support for VI Sense module
+
+From	Krzysztof Kozlowski <>
+Subject	[PATCH v2 2/2] ASoC: qcom: audioreach: Add support for VI Sense module
+Date	Thu, 4 Sep 2025 12:26:00 +0200
+
+VI Sense module in ADSP is responsible for feedback loop for measuring
+current and voltage of amplifiers, necessary for proper calibration of
+Speaker Protection algorightms.  Implement parsing
+MODULE_ID_SPEAKER_PROTECTION_VI from Audioreach topology and sending it
+as command to the ADSP.
+
+Signed-off-by: Krzysztof Kozlowski <krzysztof.kozlowski@linaro.org>
+---
+ sound/soc/qcom/qdsp6/audioreach.c | 112 ++++++++++++++++++++++++++++++
+ sound/soc/qcom/qdsp6/audioreach.h |  27 +++++++
+ 2 files changed, 139 insertions(+)
+
+diff --git a/sound/soc/qcom/qdsp6/audioreach.c b/sound/soc/qcom/qdsp6/audioreach.c
+index b68ee0e08623..ea846b51f4bb 100644
+--- a/sound/soc/qcom/qdsp6/audioreach.c
++++ b/sound/soc/qcom/qdsp6/audioreach.c
+@@ -202,6 +202,31 @@ struct apm_display_port_module_intf_cfg {
+ } __packed;
+ #define APM_DP_INTF_CFG_PSIZE ALIGN(sizeof(struct apm_display_port_module_intf_cfg), 8)
+ 
++struct apm_module_sp_vi_op_mode_cfg {
++	struct apm_module_param_data param_data;
++	struct param_id_sp_vi_op_mode_cfg cfg;
++} __packed;
++
++#define APM_SP_VI_OP_MODE_CFG_PSIZE(ch) ALIGN( \
++				sizeof(struct apm_module_sp_vi_op_mode_cfg) + \
++				(ch) * sizeof(uint32_t), 8)
++
++struct apm_module_sp_vi_ex_mode_cfg {
++	struct apm_module_param_data param_data;
++	struct param_id_sp_vi_ex_mode_cfg cfg;
++} __packed;
++
++#define APM_SP_VI_EX_MODE_CFG_PSIZE ALIGN(sizeof(struct apm_module_sp_vi_ex_mode_cfg), 8)
++
++struct apm_module_sp_vi_channel_map_cfg {
++	struct apm_module_param_data param_data;
++	struct param_id_sp_vi_channel_map_cfg cfg;
++} __packed;
++
++#define APM_SP_VI_CH_MAP_CFG_PSIZE(ch) ALIGN( \
++				sizeof(struct apm_module_sp_vi_channel_map_cfg) + \
++				(ch) * sizeof(uint32_t), 8)
++
+ static void *__audioreach_alloc_pkt(int payload_size, uint32_t opcode, uint32_t token,
+ 				    uint32_t src_port, uint32_t dest_port, bool has_cmd_hdr)
+ {
+@@ -1194,6 +1219,89 @@ static int audioreach_speaker_protection(struct q6apm_graph *graph,
+ 					 operation_mode);
+ }
+ 
++static int audioreach_speaker_protection_vi(struct q6apm_graph *graph,
++					    struct audioreach_module *module,
++					    struct audioreach_module_config *mcfg)
++{
++	u32 num_channels = mcfg->num_channels;
++	struct apm_module_sp_vi_op_mode_cfg *op_cfg;
++	struct apm_module_sp_vi_channel_map_cfg *cm_cfg;
++	struct apm_module_sp_vi_ex_mode_cfg *ex_cfg;
++	int op_sz, cm_sz, ex_sz;
++	struct apm_module_param_data *param_data;
++	int rc, i, payload_size;
++	struct gpr_pkt *pkt;
++	void *p;
++
++	if (num_channels > 2) {
++		dev_err(graph->dev, "Error: Invalid channels (%d)!\n", num_channels);
++		return -EINVAL;
++	}
++
++	op_sz = APM_SP_VI_OP_MODE_CFG_PSIZE(num_channels);
++	/* Channel mapping for Isense and Vsense, thus twice number of speakers. */
++	cm_sz = APM_SP_VI_CH_MAP_CFG_PSIZE(num_channels * 2);
++	ex_sz = APM_SP_VI_EX_MODE_CFG_PSIZE;
++
++	payload_size = op_sz + cm_sz + ex_sz;
++
++	pkt = audioreach_alloc_apm_cmd_pkt(payload_size, APM_CMD_SET_CFG, 0);
++	if (IS_ERR(pkt))
++		return PTR_ERR(pkt);
++
++	p = (void *)pkt + GPR_HDR_SIZE + APM_CMD_HDR_SIZE;
++
++	op_cfg = p;
++	param_data = &op_cfg->param_data;
++	param_data->module_instance_id = module->instance_id;
++	param_data->error_code = 0;
++	param_data->param_id = PARAM_ID_SP_VI_OP_MODE_CFG;
++	param_data->param_size = op_sz - APM_MODULE_PARAM_DATA_SIZE;
++
++	op_cfg->cfg.num_channels = num_channels;
++	op_cfg->cfg.operation_mode = PARAM_ID_SP_VI_OP_MODE_NORMAL;
++	op_cfg->cfg.quick_calibration = 1;
++	/*
++	 * op_cfg->cfg.r0_t0_selection should be set only for normal mode, keep
++	 * as 0 for calibration
++	 */
++	p += op_sz;
++
++	cm_cfg = p;
++	param_data = &cm_cfg->param_data;
++	param_data->module_instance_id = module->instance_id;
++	param_data->error_code = 0;
++	param_data->param_id = PARAM_ID_SP_VI_CHANNEL_MAP_CFG;
++	param_data->param_size = cm_sz - APM_MODULE_PARAM_DATA_SIZE;
++
++	cm_cfg->cfg.num_channels = num_channels * 2;
++	for (i = 0; i < num_channels; i++) {
++		/*
++		 * Map speakers into Vsense and then Isense of each channel.
++		 * E.g. for PCM_CHANNEL_FL and PCM_CHANNEL_FR to:
++		 * [ 1, 2, 3, 4]
++		 */
++		cm_cfg->cfg.channel_mapping[2 * i] = (mcfg->channel_map[i] - 1) * 2 + 1;
++		cm_cfg->cfg.channel_mapping[2 * i + 1] = (mcfg->channel_map[i] - 1) * 2 + 2;
++	}
++
++	p += cm_sz;
++
++	ex_cfg = p;
++	param_data = &ex_cfg->param_data;
++	param_data->module_instance_id = module->instance_id;
++	param_data->error_code = 0;
++	param_data->param_id = PARAM_ID_SP_VI_EX_MODE_CFG;
++	param_data->param_size = ex_sz - APM_MODULE_PARAM_DATA_SIZE;
++
++	ex_cfg->cfg.factory_mode = 0;
++
++	rc = q6apm_send_cmd_sync(graph->apm, pkt, 0);
++
++	kfree(pkt);
++
++	return rc;
++}
+ 
+ int audioreach_set_media_format(struct q6apm_graph *graph, struct audioreach_module *module,
+ 				struct audioreach_module_config *cfg)
+@@ -1248,6 +1356,10 @@ int audioreach_set_media_format(struct q6apm_graph *graph, struct audioreach_mod
+ 		rc = audioreach_speaker_protection(graph, module,
+ 						   PARAM_ID_SP_OP_MODE_NORMAL);
+ 		break;
++	case MODULE_ID_SPEAKER_PROTECTION_VI:
++		rc = audioreach_speaker_protection_vi(graph, module, cfg);
++		break;
++
+ 	default:
+ 		rc = 0;
+ 	}
+diff --git a/sound/soc/qcom/qdsp6/audioreach.h b/sound/soc/qcom/qdsp6/audioreach.h
+index 19828b4accce..03cfd32f1d0c 100644
+--- a/sound/soc/qcom/qdsp6/audioreach.h
++++ b/sound/soc/qcom/qdsp6/audioreach.h
+@@ -32,6 +32,7 @@ struct q6apm_graph;
+ #define MODULE_ID_GAPLESS		0x0700104D
+ #define MODULE_ID_DISPLAY_PORT_SINK	0x07001069
+ #define MODULE_ID_SPEAKER_PROTECTION	0x070010E2
++#define MODULE_ID_SPEAKER_PROTECTION_VI	0x070010E3
+ #define MODULE_ID_OPUS_DEC		0x07001174
+ 
+ #define APM_CMD_GET_SPF_STATE		0x01001021
+@@ -571,6 +572,32 @@ struct param_id_sp_op_mode {
+ 	uint32_t operation_mode;
+ } __packed;
+ 
++/* Speaker Protection VI */
++
++#define PARAM_ID_SP_VI_OP_MODE_CFG		0x080011f4
++#define PARAM_ID_SP_VI_OP_MODE_NORMAL		0
++#define PARAM_ID_SP_VI_OP_MODE_CALIBRATION	1
++#define PARAM_ID_SP_VI_OP_MODE_FACTORY_TEST	2
++#define PARAM_ID_SP_VI_OP_MODE_VALIDATION	3
++struct param_id_sp_vi_op_mode_cfg {
++	uint32_t num_channels;
++	uint32_t operation_mode;
++	uint32_t quick_calibration;
++	uint32_t r0_t0_selection[];
++} __packed;
++
++#define PARAM_ID_SP_VI_EX_MODE_CFG		0x080011ff
++struct param_id_sp_vi_ex_mode_cfg {
++	uint32_t factory_mode;
++} __packed;
++
++#define PARAM_ID_SP_VI_CHANNEL_MAP_CFG		0x08001203
++struct param_id_sp_vi_channel_map_cfg {
++	uint32_t num_channels;
++	/* [ Vsense of ch 1, Isense of ch 1, Vsense of ch 2, Isense of ch 2, ... ] */
++	uint32_t channel_mapping[];
++} __packed;
++
+ #define PARAM_ID_SAL_OUTPUT_CFG			0x08001016
+ struct param_id_sal_output_config {
+ 	uint32_t bits_per_sample;
+-- 
+2.52.0
+

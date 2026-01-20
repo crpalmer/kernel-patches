@@ -1,0 +1,20 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Tue, 20 Jan 2026 09:13:46 -0500
+Subject: localversion: linaro
+
+---
+ configs/localversion.config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configs/localversion.config b/configs/localversion.config
+index cfa4ed4bce9d..4bed82164a62 100644
+--- a/configs/localversion.config
++++ b/configs/localversion.config
+@@ -1,2 +1,2 @@
+-CONFIG_LOCALVERSION=""
++CONFIG_LOCALVERSION="-linaro"
+ # CONFIG_LOCALVERSION_AUTO is not set
+-- 
+2.52.0
+
