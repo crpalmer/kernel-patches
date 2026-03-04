@@ -202,5 +202,5 @@ index 19828b4accce..03cfd32f1d0c 100644
  struct param_id_sal_output_config {
  	uint32_t bits_per_sample;
 -- 
-2.51.1
+2.53.0
 

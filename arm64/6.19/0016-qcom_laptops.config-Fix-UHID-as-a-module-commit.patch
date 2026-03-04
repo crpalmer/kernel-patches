@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "Christopher R. Palmer" <crpalmer@gmail.com>
+Date: Mon, 22 Dec 2025 07:44:28 -0500
+Subject: qcom_laptops.config: Fix UHID as a module commit
+
+---
+ arch/arm64/configs/qcom_laptops.config | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm64/configs/qcom_laptops.config b/arch/arm64/configs/qcom_laptops.config
+index b301b1373234..144cf7f8e1fc 100644
+--- a/arch/arm64/configs/qcom_laptops.config
++++ b/arch/arm64/configs/qcom_laptops.config
+@@ -99,4 +99,4 @@ CONFIG_SND_USB_AUDIO_MIDI_V2=y
+ CONFIG_FW_LOADER_COMPRESS=y
+ CONFIG_FW_LOADER_COMPRESS_XZ=y
+ CONFIG_FW_LOADER_COMPRESS_ZSTD=y
+-CONFIG_UHID
++CONFIG_UHID=m
+-- 
+2.53.0
+
